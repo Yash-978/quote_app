@@ -66,27 +66,36 @@ class _QuotePageState extends State<QuotePage> {
                                 ),
 
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 12,right:12),
+                                  padding: const EdgeInsets.only(
+                                      left: 12, right: 12),
                                   child: Row(
                                     children: [
-                                    Text(
-                                      'Themes',
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),
-                                    ),
-                                    Spacer(),
-                                    Text(
-                                      'View All',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.bold,
-                                          color: Colors.white, fontSize: 20),
-                                    ),
-                                      Icon(Icons.arrow_forward_ios_rounded,size: 25,color: Colors.white,)
-                                  ],),
+                                      Text(
+                                        'Themes',
+                                        style: TextStyle(
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        'View All',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white,
+                                            fontSize: 20),
+                                      ),
+                                      Icon(
+                                        Icons.arrow_forward_ios_rounded,
+                                        size: 25,
+                                        color: Colors.white,
+                                      )
+                                    ],
+                                  ),
                                 ),
                                 SizedBox(
                                   height: h * 0.30,
-                                  width: w * 0.99+10,
+                                  width: w * 0.99 + 10,
                                   child: ListView.builder(
                                     itemCount: Minimalist_ImagesList.length,
                                     scrollDirection: Axis.horizontal,
@@ -98,7 +107,8 @@ class _QuotePageState extends State<QuotePage> {
                                         decoration: BoxDecoration(
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    Minimalist_ImagesList[index])),
+                                                    Minimalist_ImagesList[
+                                                        index])),
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(25))),
                                       );
@@ -106,27 +116,36 @@ class _QuotePageState extends State<QuotePage> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 12,right:12),
+                                  padding: const EdgeInsets.only(
+                                      left: 12, right: 12),
                                   child: Row(
                                     children: [
                                       Text(
                                         'Minimalist',
                                         style: TextStyle(
-                                            color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold),
                                       ),
                                       Spacer(),
                                       Text(
                                         'View All',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            color: Colors.white, fontSize: 20),
+                                            color: Colors.white,
+                                            fontSize: 20),
                                       ),
-                                      Icon(Icons.arrow_forward_ios_rounded,size: 25,color: Colors.white,)
-                                    ],),
+                                      Icon(
+                                        Icons.arrow_forward_ios_rounded,
+                                        size: 25,
+                                        color: Colors.white,
+                                      )
+                                    ],
+                                  ),
                                 ),
                                 SizedBox(
                                   height: h * 0.30,
-                                  width: w * 0.99+10,
+                                  width: w * 0.99 + 10,
                                   child: ListView.builder(
                                     itemCount: Gradient_ImageList.length,
                                     scrollDirection: Axis.horizontal,
@@ -146,28 +165,37 @@ class _QuotePageState extends State<QuotePage> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(left: 12,right:12),
+                                  padding: const EdgeInsets.only(
+                                      left: 12, right: 12),
                                   child: Row(
                                     children: [
                                       Text(
                                         'Luxury',
                                         style: TextStyle(
-                                            color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),
+                                            color: Colors.white,
+                                            fontSize: 20,
+                                            fontWeight: FontWeight.bold),
                                       ),
                                       Spacer(),
                                       Text(
                                         'View All',
                                         style: TextStyle(
                                             fontWeight: FontWeight.bold,
-                                            color: Colors.white, fontSize: 20),
+                                            color: Colors.white,
+                                            fontSize: 20),
                                       ),
-                                      Icon(Icons.arrow_forward_ios_rounded,size: 25,color: Colors.white,)
-                                    ],),
+                                      Icon(
+                                        Icons.arrow_forward_ios_rounded,
+                                        size: 25,
+                                        color: Colors.white,
+                                      )
+                                    ],
+                                  ),
                                 ),
 
                                 SizedBox(
                                   height: h * 0.30,
-                                  width: w * 0.99+10,
+                                  width: w * 0.99 + 10,
                                   child: ListView.builder(
                                     itemCount: Luxury_ImageList.length,
                                     scrollDirection: Axis.horizontal,
@@ -380,7 +408,7 @@ class _QuotePageState extends State<QuotePage> {
         width: w * 0.980 + 10,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('Assets/Images/Motivation/bg 3.jpg'),
+                image: AssetImage('Assets/Images/Luxury/a13.jpg'),
                 fit: BoxFit.cover)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -442,7 +470,7 @@ class _QuotePageState extends State<QuotePage> {
             Expanded(
               flex: 3,
               child: SelectableText(
-                'I am allowed to ask for waht I want and what I need',
+                'I am allowed to ask for what I want and what I need',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.white,
