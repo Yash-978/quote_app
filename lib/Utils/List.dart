@@ -30,14 +30,18 @@ List Quote_Type_Categories = [
   {
     'home_Icon': Icons.star_border_purple500_outlined,
     'home_Text': 'Message of Encouragement',
+    'home_color':Color(0xff2AA274)
   },
   {
     'home_Icon': Icons.star_border_purple500_outlined,
     'home_Text': 'For Status',
+    'home_color':Color(0xffB3994D)
+
   },
   {
     'home_Icon': Icons.star_border_purple500_outlined,
     'home_Text': 'Anxiety',
+    'home_color':Color(0xffA87BEA)
   },
   {
     'home_Icon': Icons.star_border_purple500_outlined,
@@ -47,33 +51,44 @@ List Quote_Type_Categories = [
   {
     'home_Icon': Icons.star_border_purple500_outlined,
     'home_Text': 'Business',
+    'home_color':Color(0xff2AA274)
   },
   {
     'home_Icon': Icons.star_border_purple500_outlined,
     'home_Text': 'Overcoming',
+    'home_color':Color(0xffB3994D)
   },
   {
     'home_Icon': Icons.star_border_purple500_outlined,
     'home_Text': 'Positivity',
+    'home_color':Color(0xffA87BEA)
   },
   {
     'home_Icon': Icons.star_border_purple500_outlined,
     'home_Text': 'Depression',
+    'home_color':Colors.blueAccent
   },
   {
     'home_Icon': Icons.star_border_purple500_outlined,
     'home_Text': 'Good Morning',
+    'home_color':Color(0xff2AA274)
   },
   {
     'home_Icon': Icons.star_border_purple500_outlined,
     'home_Text': 'Self Esteem',
+    'home_color':Color(0xffB3994D)
   },
   {
     'home_Icon': Icons.star_border_purple500_outlined,
     'home_Text': 'Short Quotes',
+    'home_color':Color(0xffA87BEA)
   },
   {
     'home_Icon': Icons.star_border_purple500_outlined,
     'home_Text': 'Move on',
+    'home_color':Colors.blueAccent
   },
+];
+List Motivation=[
+
 ];

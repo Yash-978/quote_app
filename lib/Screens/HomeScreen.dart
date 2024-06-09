@@ -21,7 +21,12 @@ class _HomePageState extends State<HomePage> {
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
       appBar: AppBar(
-        title: Text('Toggle'),
+        // leading: Icon(Icons.home),
+        title: ElevatedButton.icon(
+          onPressed: () {},
+          icon: Icon(Icons.home),
+          label: Text('Home'),
+        ),
         actions: [
           SegmentedButton(
             // style: ButtonStyle(),
@@ -31,13 +36,19 @@ class _HomePageState extends State<HomePage> {
                   value: 'ListView',
                   label: Text(
                     'ListView',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 12),
                   ),
-                  icon: const Icon(Icons.list_alt)),
+                  icon: const Icon(
+                    Icons.list_alt,
+                    size: 18,
+                  )),
               ButtonSegment<String>(
                 value: 'GridView',
-                label: Text('GridView', style: TextStyle(fontSize: 20)),
-                icon: const Icon(Icons.apps_rounded),
+                label: Text('GridView', style: TextStyle(fontSize: 12)),
+                icon: const Icon(
+                  Icons.apps_rounded,
+                  size: 18,
+                ),
               ),
             ],
             selected: _selected,
@@ -61,35 +72,41 @@ class _HomePageState extends State<HomePage> {
                     onTap: () {
                       Navigator.pushNamed(context, '/quote');
                     },
-                    child: Container(
-                      margin: EdgeInsets.all(10),
-                      // padding: EdgeInsets.all(15),
-                      height: h * 0.10,
-                      width: w * 0.5,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        color: HomeScreenColorlist[
-                            index % HomeScreenColorlist.length],
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Quote_Type_Categories[index]['home_Icon'],
-                            size: 40,
-                            color: Quote_Type_Categories[index]['home_color'],
-                          ),
-                          SizedBox(
-                            height: h * 0.02,
-                          ),
-                          Text(
-                            Quote_Type_Categories[index]['home_Text'],
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 25,
+                    child: Card(
+                      // color: Colors.transparent,
+                      // shadowColor: Colors.black12,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Container(
+                        margin: EdgeInsets.all(10),
+                        // padding: EdgeInsets.all(15),
+                        height: h * 0.10,
+                        width: w * 0.5,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(25),
+                          color: HomeScreenColorlist[
+                              index % HomeScreenColorlist.length],
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Quote_Type_Categories[index]['home_Icon'],
+                              size: 40,
+                              color: Quote_Type_Categories[index]['home_color'],
                             ),
-                          ),
-                        ],
+                            SizedBox(
+                              height: h * 0.02,
+                            ),
+                            Text(
+                              Quote_Type_Categories[index]['home_Text'],
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 25,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -97,29 +114,40 @@ class _HomePageState extends State<HomePage> {
               : ListView.builder(
                   itemCount: Quote_Type_Categories.length,
                   itemBuilder: (context, index) => Card(
-                    child: Container(
-                      height: h * 0.10,
-                      width: w * 0.5,
-                      decoration: BoxDecoration(
-                        color: HomeScreenColorlist[
-                            index % HomeScreenColorlist.length],
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Quote_Type_Categories[index]['home_Icon'],
-                            size: 40,
-                            color: Quote_Type_Categories[index]['home_color'],
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/quote');
+                      },
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(30)),
+                        child: Container(
+                          height: h * 0.10,
+                          width: w * 0.5,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: HomeScreenColorlist[
+                                index % HomeScreenColorlist.length],
                           ),
-                          SizedBox(
-                            width: w * 0.06,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              Icon(
+                                Quote_Type_Categories[index]['home_Icon'],
+                                size: 40,
+                                color: Quote_Type_Categories[index]
+                                    ['home_color'],
+                              ),
+                              SizedBox(
+                                width: w * 0.06,
+                              ),
+                              Text(
+                                Quote_Type_Categories[index]['home_Text'],
+                                style: TextStyle(fontSize: 22),
+                              ),
+                            ],
                           ),
-                          Text(
-                            Quote_Type_Categories[index]['home_Text'],
-                            style: TextStyle(fontSize: 22),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                   ),
