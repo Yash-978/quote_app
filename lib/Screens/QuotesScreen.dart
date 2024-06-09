@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
+import '../Utils/ImagesList.dart';
+
 double textSizeSlider = 1;
 
 class QuotePage extends StatefulWidget {
@@ -59,61 +61,132 @@ class _QuotePageState extends State<QuotePage> {
                           child: SingleChildScrollView(
                             child: Column(
                               children: [
-                                // SizedBox(
-                                //   height: h * 0.02,
-                                // ),
-                                Align(
-                                    alignment: Alignment.centerLeft,
-                                    child: Padding(
-                                      padding: const EdgeInsets.only(left: 30),
-                                      child: Text(
-                                        'Themes',
+                                SizedBox(
+                                  height: h * 0.022,
+                                ),
+
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 12,right:12),
+                                  child: Row(
+                                    children: [
+                                    Text(
+                                      'Themes',
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),
+                                    ),
+                                    Spacer(),
+                                    Text(
+                                      'View All',
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                          color: Colors.white, fontSize: 20),
+                                    ),
+                                      Icon(Icons.arrow_forward_ios_rounded,size: 25,color: Colors.white,)
+                                  ],),
+                                ),
+                                SizedBox(
+                                  height: h * 0.30,
+                                  width: w * 0.99+10,
+                                  child: ListView.builder(
+                                    itemCount: Minimalist_ImagesList.length,
+                                    scrollDirection: Axis.horizontal,
+                                    itemBuilder: (context, index) {
+                                      return Container(
+                                        margin: EdgeInsets.all(5),
+                                        height: h * 0.30,
+                                        width: w * 0.4,
+                                        decoration: BoxDecoration(
+                                            image: DecorationImage(
+                                                image: AssetImage(
+                                                    Minimalist_ImagesList[index])),
+                                            borderRadius: BorderRadius.all(
+                                                Radius.circular(25))),
+                                      );
+                                    },
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 12,right:12),
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        'Minimalist',
                                         style: TextStyle(
+                                            color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        'View All',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
                                             color: Colors.white, fontSize: 20),
                                       ),
-                                    )),
+                                      Icon(Icons.arrow_forward_ios_rounded,size: 25,color: Colors.white,)
+                                    ],),
+                                ),
                                 SizedBox(
-                                  height: h * 0.22,
-                                  width: w * 0.9,
+                                  height: h * 0.30,
+                                  width: w * 0.99+10,
                                   child: ListView.builder(
-                                    itemCount: 5,
+                                    itemCount: Gradient_ImageList.length,
                                     scrollDirection: Axis.horizontal,
                                     itemBuilder: (context, index) {
                                       return Container(
                                         margin: EdgeInsets.all(5),
-                                        height: h * 0.20,
-                                        width: w * 0.3,
+                                        height: h * 0.30,
+                                        width: w * 0.4,
                                         decoration: BoxDecoration(
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    'Assets/Images/Motivation/bg 4.jpg')),
+                                                    Gradient_ImageList[index])),
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(25))),
                                       );
                                     },
                                   ),
                                 ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 12,right:12),
+                                  child: Row(
+                                    children: [
+                                      Text(
+                                        'Luxury',
+                                        style: TextStyle(
+                                            color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),
+                                      ),
+                                      Spacer(),
+                                      Text(
+                                        'View All',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.white, fontSize: 20),
+                                      ),
+                                      Icon(Icons.arrow_forward_ios_rounded,size: 25,color: Colors.white,)
+                                    ],),
+                                ),
+
                                 SizedBox(
-                                  height: h * 0.22,
-                                  width: w * 0.9,
+                                  height: h * 0.30,
+                                  width: w * 0.99+10,
                                   child: ListView.builder(
-                                    itemCount: 5,
+                                    itemCount: Luxury_ImageList.length,
                                     scrollDirection: Axis.horizontal,
                                     itemBuilder: (context, index) {
                                       return Container(
                                         margin: EdgeInsets.all(5),
-                                        height: h * 0.20,
-                                        width: w * 0.3,
+                                        height: h * 0.30,
+                                        width: w * 0.4,
                                         decoration: BoxDecoration(
                                             image: DecorationImage(
                                                 image: AssetImage(
-                                                    'Assets/Images/Motivation/bg 2.jpg')),
+                                                    Luxury_ImageList[index])),
                                             borderRadius: BorderRadius.all(
                                                 Radius.circular(25))),
                                       );
                                     },
                                   ),
                                 ),
+
                                 // ...List.generate(10, (index) => SizedBox(
                                 //   height: h * 0.22,
                                 //   width: w * 0.9,
