@@ -70,7 +70,6 @@ class _HomePageState extends State<HomePage> {
                       crossAxisCount: 2, childAspectRatio: 1),
                   itemBuilder: (context, index) => GestureDetector(
                     onTap: () {
-
                       Navigator.pushNamed(context, '/quote');
                     },
                     child: Card(

@@ -5,7 +5,7 @@ import 'package:flutter/widgets.dart';
 
 import '../Utils/ImagesList.dart';
 
-double textSizeSlider = 1;
+double textSizeSlider = 10;
 
 class QuotePage extends StatefulWidget {
   const QuotePage({super.key});
@@ -294,7 +294,7 @@ class _QuotePageState extends State<QuotePage> {
                                   )),
                               Slider(
                                 max: 100,
-                                divisions: 12,
+                                divisions: 10,
                                 label: textSizeSlider.round().toString(),
                                 inactiveColor: Colors.black87,
                                 activeColor: Colors.white,
@@ -302,9 +302,12 @@ class _QuotePageState extends State<QuotePage> {
                                 onChanged: (value) {
                                   setState(() {
                                     textSizeSlider = value;
+                                    print(textSizeSlider);
                                   });
                                 },
                               ),
+
+
                               Row(
                                 children: [
                                   Container(
