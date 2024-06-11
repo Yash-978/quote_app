@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:quote_app/Utils/List.dart';
 
 import '../Utils/ImagesList.dart';
 
@@ -473,7 +474,7 @@ class _QuotePageState extends State<QuotePage> {
             Expanded(
               flex: 3,
               child: SelectableText(
-                'I am allowed to ask for what I want and what I need',
+                '',
                 textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.white,
@@ -523,3 +524,5 @@ class _QuotePageState extends State<QuotePage> {
     );
   }
 }
+
+

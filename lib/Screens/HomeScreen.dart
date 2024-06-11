@@ -164,3 +164,4 @@ List HomeScreenColorlist = [
   Color(0xffFFE9A6),
   Color(0xffDBCCFD),
 ];
+
