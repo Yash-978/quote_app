@@ -22,9 +22,6 @@ class _QuotePageState extends State<QuotePage> {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
-      appBar: AppBar(),
-      // backgroundColor: Colors.black,
-      // extendBody: true,
 
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
@@ -58,14 +55,12 @@ class _QuotePageState extends State<QuotePage> {
                         return Container(
                           height: h * 0.800,
                           width: w * 0.95,
-
                           child: SingleChildScrollView(
                             child: Column(
                               children: [
                                 SizedBox(
                                   height: h * 0.022,
                                 ),
-
                                 Padding(
                                   padding: const EdgeInsets.only(
                                       left: 12, right: 12),
@@ -104,7 +99,8 @@ class _QuotePageState extends State<QuotePage> {
                                       return GestureDetector(
                                         onTap: () {
                                           setState(() {
-                                            selectbg=Minimalist_ImagesList[index];
+                                            selectbg =
+                                                Minimalist_ImagesList[index];
                                           });
                                         },
                                         child: Container(
@@ -200,7 +196,6 @@ class _QuotePageState extends State<QuotePage> {
                                     ],
                                   ),
                                 ),
-
                                 SizedBox(
                                   height: h * 0.30,
                                   width: w * 0.99 + 10,
@@ -276,8 +271,6 @@ class _QuotePageState extends State<QuotePage> {
                                   });
                                 },
                               ),
-
-
                               Row(
                                 children: [
                                   Container(
@@ -376,135 +369,76 @@ class _QuotePageState extends State<QuotePage> {
         shape: CircularNotchedRectangle(),
       ),
       body: Container(
-        // padding: EdgeInsets.all(8),
-        height: h * 0.990 + 12,
-        width: w * 0.980 + 10,
-        decoration: BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage(selectbg),
-                fit: BoxFit.cover)),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            SizedBox(
-              height: h * 0.042,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(right: 22),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Expanded(
-                    flex: 4,
-                    child: IconButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      icon: Icon(
-                        Icons.arrow_back_rounded,
-                        color: Colors.white,
-                        size: 30,
+          height: h * 0.990 + 12,
+          width: w * 0.980 + 10,
+          decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage(selectbg), fit: BoxFit.cover)),
+          child: PageView(
+            scrollDirection: Axis.vertical,
+            children: [
+              ...List.generate(
+                categoryStore.length,
+                (index) => Column(
+                  children: [
+                    ListTile(
+                      title: SelectableText(
+                        Quote_Type_Categories[selectedindex]['home_Text'],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      subtitle: SelectableText(
+                        categoryStore[index]['quote'],
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 40,
+                            fontWeight: FontWeight.w500),
                       ),
                     ),
-                  ),
-                  SizedBox(
-                    width: w * 0.3,
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.bookmark_outline_rounded,
-                      color: Colors.white,
-                      size: 30,
+                    Padding(
+                      padding: const EdgeInsets.only(right: 22),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.bookmark_outline_rounded,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.share,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () {},
+                            icon: Icon(
+                              Icons.diamond_rounded,
+                              color: Colors.white,
+                              size: 30,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.share,
-                      color: Colors.white,
-                      size: 30,
-                    ),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.diamond_rounded,
-                      color: Colors.white,
-                      size: 30,
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: h * 0.15,
-            ),
-           PageView(
-             children: [
-               ...List.generate(categoryStore.length, (index) => ListTile(
-                 title: SelectableText(
-                   Quote_Type_Categories[selectedindex]['home_Text'],
-                   textAlign: TextAlign.center,
-                   style: TextStyle(
-                       color: Colors.white,
-                       fontSize: 10,
-                       fontWeight: FontWeight.w500),
-                 ),
-                 subtitle: SelectableText(
-                   categoryStore[index]['quote'],
 
-                   textAlign: TextAlign.center,
-                   style: TextStyle(
-                       color: Colors.white,
-                       fontSize: 10,
-                       fontWeight: FontWeight.w500),
-                 ),
-               ),),
-             ],
-           ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Container(
-                  height: h * 0.4,
-                  width: w * 0.099 + 15,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xff70687E),
-                      border: Border.all(color: Color(0xff574F6A), width: 2)),
-                  child: Icon(
-                    Icons.close_rounded,
-                    color: Colors.white,
-                    size: 45,
-                  ),
-                ),
-                SizedBox(
-                  width: w * 0.050,
-                ),
-                Container(
-                  height: h * 0.4,
-                  width: w * 0.099 + 15,
-                  alignment: Alignment.center,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Color(0xff70687E),
-                      border: Border.all(color: Color(0xff574F6A), width: 2)),
-                  child: Icon(
-                    Icons.favorite,
-                    color: Colors.white,
-                    size: 40,
-                  ),
-                ),
-              ],
-            )
-          ],
-        ),
-      ),
+            ],
+          )),
     );
   }
 }
 
-
-String selectbg='Assets/Images/Luxury/a13.jpg';
+String selectbg = 'Assets/Images/Luxury/a13.jpg';
