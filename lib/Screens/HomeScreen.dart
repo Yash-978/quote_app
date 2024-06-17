@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quote_app/Utils/newList.dart';
 
 import '../Utils/List.dart';
 import '../Utils/routes.dart';
@@ -10,6 +11,7 @@ class HomePage extends StatefulWidget {
   State<HomePage> createState() => _HomePageState();
 }
 
+QuoteModel? quoteModelQ1;
 bool changeToggle = false;
 
 Set<String> _selected = {'ListView'};
@@ -17,6 +19,7 @@ Set<String> _selected = {'ListView'};
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    quoteModelQ1 = QuoteModel.toList(l1: QuoteList);
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
@@ -70,7 +73,17 @@ class _HomePageState extends State<HomePage> {
                       crossAxisCount: 2, childAspectRatio: 1),
                   itemBuilder: (context, index) => GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/quote');
+                      selectedindex = index;
+                      categoryStore.clear();
+                      for (int i = 0;
+                          i < quoteModelQ1!.quoteModel_List.length;
+                          i++) {
+                        if (category[index] ==
+                            quoteModelQ1!.quoteModel_List[i].cate) {
+                          categoryStore.add(QuoteList[i]);
+                        }
+                      }
+                      Navigator.of(context).pushNamed('/quote');
                     },
                     child: Card(
                       // color: Colors.transparent,
@@ -113,40 +126,47 @@ class _HomePageState extends State<HomePage> {
                 )
               : ListView.builder(
                   itemCount: Quote_Type_Categories.length,
-                  itemBuilder: (context, index) => Card(
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.pushNamed(context, '/quote');
-                      },
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30)),
-                        child: Container(
-                          height: h * 0.10,
-                          width: w * 0.5,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: HomeScreenColorlist[
-                                index % HomeScreenColorlist.length],
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Icon(
-                                Quote_Type_Categories[index]['home_Icon'],
-                                size: 40,
-                                color: Quote_Type_Categories[index]
-                                    ['home_color'],
-                              ),
-                              SizedBox(
-                                width: w * 0.06,
-                              ),
-                              Text(
-                                Quote_Type_Categories[index]['home_Text'],
-                                style: TextStyle(fontSize: 22),
-                              ),
-                            ],
-                          ),
+                  itemBuilder: (context, index) => GestureDetector(
+                    onTap: () {
+                      selectedindex = index;
+                      categoryStore.clear();
+                      for (int i = 0;
+                          i < quoteModelQ1!.quoteModel_List.length;
+                          i++) {
+                        if (category[index] ==
+                            quoteModelQ1!.quoteModel_List[i].cate) {
+                          categoryStore.add(QuoteList[i]);
+                        }
+                      }
+                      Navigator.of(context).pushNamed('/quote');
+                    },
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30)),
+                      child: Container(
+                        height: h * 0.10,
+                        width: w * 0.5,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          color: HomeScreenColorlist[
+                              index % HomeScreenColorlist.length],
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Quote_Type_Categories[index]['home_Icon'],
+                              size: 40,
+                              color: Quote_Type_Categories[index]['home_color'],
+                            ),
+                            SizedBox(
+                              width: w * 0.06,
+                            ),
+                            Text(
+                              Quote_Type_Categories[index]['home_Text'],
+                              style: TextStyle(fontSize: 22),
+                            ),
+                          ],
                         ),
                       ),
                     ),
@@ -165,3 +185,4 @@ List HomeScreenColorlist = [
   Color(0xffDBCCFD),
 ];
 
+int selectedindex = 0;

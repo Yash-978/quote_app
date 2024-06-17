@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+List categoryStore=[];
 List Favorite = [];
 List Quote_Type_Categories = [
   {
@@ -10,40 +10,37 @@ List Quote_Type_Categories = [
   {
     'home_Icon': Icons.star_border_purple500_rounded,
     'home_Text': 'Inspiration',
-    'home_color':Color(0xff2AA274)
+    'home_color': Color(0xff2AA274)
   },
   {
     'home_Icon': Icons.favorite,
     'home_Text': 'Love',
-    'home_color':Color(0xffB3994D)
+    'home_color': Color(0xffB3994D)
   },
   {
     'home_Icon': Icons.add_a_photo_outlined,
     'home_Text': 'For Photos',
-    'home_color':Color(0xffA87BEA)
-
+    'home_color': Color(0xffA87BEA)
   },
   {
     'home_Icon': Icons.phone_iphone_rounded,
     'home_Text': 'For Status',
     'home_color': Color(0xff27A7CF)
-
   },
   {
     'home_Icon': Icons.sentiment_dissatisfied_rounded,
     'home_Text': 'Anxiety',
-    'home_color':Color(0xff2AA274)
-
+    'home_color': Color(0xff2AA274)
   },
   {
     'home_Icon': Icons.personal_injury_outlined,
     'home_Text': 'Suicide  ',
-    'home_color':Color(0xffB3994D)
+    'home_color': Color(0xffB3994D)
   },
   {
     'home_Icon': Icons.rocket_outlined,
     'home_Text': 'Business',
-    'home_color':Color(0xffA87BEA)
+    'home_color': Color(0xffA87BEA)
   },
   {
     'home_Icon': Icons.emoji_events_outlined,
@@ -53,21 +50,54 @@ List Quote_Type_Categories = [
   {
     'home_Icon': Icons.sports_handball_outlined,
     'home_Text': 'Positivity',
-    'home_color':Color(0xff2AA274)
+    'home_color': Color(0xff2AA274)
   },
   {
     'home_Icon': Icons.volunteer_activism_outlined,
     'home_Text': 'Depression',
-    'home_color':Color(0xffB3994D)
+    'home_color': Color(0xffB3994D)
   },
-
   {
     'home_Icon': Icons.psychology_outlined,
     'home_Text': 'Move on',
-    'home_color':Color(0xffA87BEA)
+    'home_color': Color(0xffA87BEA)
   },
 ];
 
+class QuoteModel {
+  String? quote;
+  String? author;
+  String? cate;
+
+  QuoteModel({this.author, this.quote, this.cate});
+
+  List<QuoteModel> quoteModel_List = [];
+
+  factory QuoteModel.fromquote(Map m1) {
+    return QuoteModel(
+        author: m1['author'], quote: m1['quote'], cate: m1['cate']);
+  }
+
+  QuoteModel.toList({required List l1}) {
+    for (int i = 0; i < l1.length; i++) {
+      quoteModel_List.add(QuoteModel.fromquote(l1[i]));
+    }
+  }
+}
+List category = [
+  'Motivation',
+  'Love',
+  'Inspiration',
+  'Sad',
+  'Buisness',
+  'Overcoming',
+  'Positivity',
+  'Depration',
+  'Move on',
+  'Photos',
+  'Status',
+  'Sucide',
+];
 /*List Quote_Type_Categories = [
   {
     'home_Icon': Icons.emoji_emotions_outlined,
@@ -155,9 +185,6 @@ List Quote_Type_Categories = [
     'home_color': Colors.blueAccent
   },
 ];*/
-
-
-
 
 // Map quotesMap = {
 //
@@ -263,34 +290,4 @@ List Quote_Type_Categories = [
 //     print('');
 //   }
 // });
-Map categoriesMap={};
-// class QuoteModel
-// {
-//   String? quote;
-//   String? author;
-//   QuoteModel({this.author,this.quote});
-//   List quoteModel_List=[];
-//   factory QuoteModel.fromquote(Map m1)
-//   {
-//     return QuoteModel(author: m1['author'],quote: m1['quote']);
-//
-//   }
-//   void convertToList(List l1)
-//   {
-//     quoteModel_List.addAll(l1.map((e) => QuoteModel.fromquote(e)).toList());
-//   }
-//   /*void generateMap()
-//   {
-//     for (String i in categories){
-//       categoriesMap[i] = quotesMap[i].map((e) => QuoteModel.fromquote(e)).toList();
-//     }
-//   }*/
-//   void generateMap() {
-//     for (String i in categories) {
-//       categoriesMap[i] = quotesMap[i].map((e) => QuoteModel.fromquote(e)).toList();
-//     }
-//   }
-//
-//
-//
-// }
+Map categoriesMap = {};

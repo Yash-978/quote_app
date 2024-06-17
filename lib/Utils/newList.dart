@@ -1,795 +1,688 @@
-List quoteList = [
+List QuoteList = [
+  //Motivation
   {
-    'quote' : "Success is not final, failure is not fatal: It is the courage to continue that counts",
-    'author' : "Winston Churchill",
-    'cate' : "Success",
+    'quote': 'The best way to get started is to quit talking and begin doing.',
+    'author': 'Walt Disney',
+    'cate': 'Motivation',
   },
   {
-    'quote' : "What you get by achieving your goals is not as important as what you become by achieving your goals",
-    'author' : "Zig Ziglar",
-    'cate' : "Success",
+    'quote':
+    'The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.',
+    'author': 'Winston Churchill',
+    'cate': 'Motivation',
   },
   {
-    'quote' : "I have not failed. I've just found 10,000 ways that won't work",
-    'author' : "Thomas Edison",
-    'cate' : "Success",
+    'quote': 'Don’t let yesterday take up too much of today.',
+    'author': 'Will Rogers',
+    'cate': 'Motivation',
   },
   {
-    'quote' : "Try not to become a man of success. Rather become a man of value",
-    'author' : "Albert Einstein",
-    'cate' : "Success",
+    'quote':
+    'You learn more from failure than from success. Don’t let it stop you. Failure builds character.',
+    'author': 'Unknown',
+    'cate': 'Motivation',
   },
   {
-    'quote' : "Many of life's failures are people who did not realize how close they were to success when they gave up",
-    'author' : "Thomas Edison",
-    'cate' : "Success",
+    'quote': 'It’s not whether you get knocked down, it’s whether you get up.',
+    'author': 'Vince Lombardi',
+    'cate': 'Motivation',
   },
   {
-    'quote' : "Coming together is a beginning; keeping together is progress; working together is success",
-    'author' : "Henry Ford",
-    'cate' : "Success",
+    'quote':
+    'If you are working on something that you really care about, you don’t have to be pushed. The vision pulls you.',
+    'author': 'Steve Jobs',
+    'cate': 'Motivation',
   },
   {
-    'quote' : "There are no secrets to success. It is the result of preparation, hard work, and learning from failure",
-    'author' : "Colin Powell",
-    'cate' : "Success",
+    'quote':
+    'People who are crazy enough to think they can change the world, are the ones who do.',
+    'author': 'Rob Siltanen',
+    'cate': 'Motivation',
   },
   {
-    'quote' : "Patience, persistence and perspiration make an unbeatable combination for success",
-    'author' : "Napoleon Hill",
-    'cate' : "Success",
+    'quote':
+    'Failure will never overtake me if my determination to succeed is strong enough.',
+    'author': 'Og Mandino',
+    'cate': 'Motivation',
   },
   {
-
-    'quote' : "The path to success is to take massive, determined action",
-    'author' : "Tony Robbins",
-    'cate' : "Success",
+    'quote':
+    'Entrepreneurs are great at dealing with uncertainty and also very good at minimizing risk. That’s the classic entrepreneur.',
+    'author': 'Mohnish Pabrai',
+    'cate': 'Motivation',
   },
   {
-
-    'quote' : "Doing the best at this moment puts you in the best place for the next moment",
-    'author' : "Oprah Winfrey",
-    'cate' : "Success",
+    'quote': 'We may encounter many defeats but we must not be defeated.',
+    'author': 'Maya Angelou',
+    'cate': 'Motivation',
   },
+  //love
   {
-
-    'quote' : "Success is nothing more than a few simple disciplines, practiced every day",
-    'author' : "Jim Rohn",
-    'cate' : "Success",
+    'quote': 'Love is composed of a single soul inhabiting two bodies.',
+    'author': 'Aristotle',
+    'cate': 'Love',
   },
   {
-
-    'quote' : "Always bear in mind that your own resolution to succeed is more important than any other one thing",
-    'author' : "JAbraham Lincoln",
-    'cate' : "Success",
+    'quote': 'To love and be loved is to feel the sun from both sides.',
+    'author': 'David Viscott',
+    'cate': 'Love',
   },
   {
-
-    'quote' : "Success is getting what you want. Happiness is wanting what you get",
-    'author' : "Dale Carnegie",
-    'cate' : "Success",
+    'quote':
+    'Being deeply loved by someone gives you strength, while loving someone deeply gives you courage.',
+    'author': 'Lao Tzu',
+    'cate': 'Love',
   },
   {
-
-    'quote' : "It's fine to celebrate success but it is more important to heed the lessons of failure",
-    'author' : "Bill Gates",
-    'cate' : "Success",
+    'quote': 'The best thing to hold onto in life is each other.',
+    'author': 'Audrey Hepburn',
+    'cate': 'Love',
   },
   {
-
-    'quote' : "Instead of wondering when your next vacation is, maybe you should set up a life you don’t need to escape from",
-    'author' : "Seth Godin",
-    'cate' : "Success",
+    'quote':
+    'Love is when the other person\'s happiness is more important than your own.',
+    'author': 'H. Jackson Brown, Jr.',
+    'cate': 'Love',
   },
   {
-
-    'quote' : "Work like there is someone working 24 hours a day to take it away from you",
-    'author' : "Mark Cuban",
-    'cate' : "Success",
+    'quote': 'To love and be loved is to the greatest happiness of existence.',
+    'author': 'Sydney Smith',
+    'cate': 'Love',
   },
   {
-
-    'quote' : "It is not the strongest of the species that survive, nor the most intelligent, but the one most responsive to change",
-    'author' : "Charles Darwin",
-    'cate' : "Success",
+    'quote': 'We are shaped and fashioned by what we love.',
+    'author': 'Johann Wolfgang von Goethe',
+    'cate': 'Love',
   },
   {
-
-    'quote' : "A successful man is one who can lay a firm foundation with the bricks others have thrown at him",
-    'author' : "David Brinkley",
-    'cate' : "Success",
+    'quote': 'Love is not only something you feel, it is something you do.',
+    'author': 'David Wilkerson',
+    'cate': 'Love',
   },
   {
-
-    'quote' : "The key is not to prioritize what’s on your schedule, but to schedule your priorities",
-    'author' : "Stephen Covey",
-    'cate' : "Success",
+    'quote': 'Where there is love there is life.',
+    'author': 'Mahatma Gandhi',
+    'cate': 'Love',
   },
   {
-
-    'quote' : "The key to success is to focus our conscious mind on things we desire not things we fear",
-    'author' : "Brian Tracy",
-    'cate' : "Success",
+    'quote': 'Love does not dominate; it cultivates.',
+    'author': 'Johann Wolfgang von Goethe',
+    'cate': 'Love',
   },
+  //Inspiration
   {
-    'quote' : "The best thing to hold onto in life is each other",
-    'author' : "Audrey Hepburn",
-    'cate' : "Love",
+    'quote': 'The only way to do great work is to love what you do.',
+    'author': 'Steve Jobs',
+    'cate': 'Inspiration',
   },
   {
-    'quote' : "Love is composed of a single soul inhabiting two bodies",
-    'author' : "Aristotle",
-    'cate' : "Love",
+    'quote':
+    'The best time to plant a tree was 20 years ago. The second best time is now.',
+    'author': 'Chinese Proverb',
+    'cate': 'Inspiration',
   },
   {
-    'quote' : "To love and be loved is to feel the sun from both sides",
-    'author' : "David Viscott",
-    'cate' : "Love",
+    'quote':
+    'Your time is limited, don\'t waste it living someone else\'s life.',
+    'author': 'Steve Jobs',
+    'cate': 'Inspiration',
   },
   {
-    'quote' : "Love looks not with the eyes, but with the mind, And therefore is winged Cupid painted blind",
-    'author' : "William Shakespeare",
-    'cate' : "Love",
+    'quote': 'The best revenge is massive success.',
+    'author': 'Frank Sinatra',
+    'cate': 'Inspiration',
   },
   {
-    'quote' : "Love recognizes no barriers. It jumps hurdles, leaps fences, penetrates walls to arrive at its destination full of hope",
-    'author' : "Lao Tzu",
-    'cate' : "Love",
+    'quote':
+    'I have not failed. I\'ve just found 10,000 ways that won\'t work.',
+    'author': 'Thomas Edison',
+    'cate': 'Inspiration',
   },
   {
-    'quote' : "Being deeply loved by someone gives you strength, while loving someone deeply gives you courage",
-    'author' : "Maya Angelou",
-    'cate' : "Love",
+    'quote': 'If you can dream it, you can achieve it.',
+    'author': 'Zig Ziglar',
+    'cate': 'Inspiration',
   },
   {
-    'quote' : "I love you without knowing how, or when, or from where. I love you simply, without problems or pride",
-    'author' : "Pablo Neruda",
-    'cate' : "Love",
+    'quote':
+    'What lies behind us and what lies before us are tiny matters compared to what lies within us.',
+    'author': 'Ralph Waldo Emerson',
+    'cate': 'Inspiration',
   },
   {
-    'quote' : "You know you're in love when you can't fall asleep because reality is finally better than your dreams",
-    'author' : "Dr. Seuss",
-    'cate' : "Love",
+    'quote': 'Believe you can and you\'re halfway there.',
+    'author': 'Theodore Roosevelt',
+    'cate': 'Inspiration',
   },
   {
-    'quote' : "The best and most beautiful things in this world cannot be seen or even heard, but must be felt with the heart",
-    'author' : "Helen Kelle",
-    'cate' : "Love",
+    'quote':
+    'Do not wait to strike till the iron is hot; but make it hot by striking.',
+    'author': 'William Butler Yeats',
+    'cate': 'Inspiration',
   },
   {
-    'quote' : "The minute I heard my first love story, I started looking for you, not knowing how blind that was",
-    'author' : "Rumi",
-    'cate' : "Love",
+    'quote': 'The journey of a thousand miles begins with one step.',
+    'author': 'Lao Tzu',
+    'cate': 'Inspiration',
   },
+  //sad
   {
-    'quote' : "I have found the paradox, that if you love until it hurts, there can be no more hurt, only more love",
-    'author' : "Mother Teresa",
-    'cate' : "Love",
+    'quote':
+    'Do not anticipate trouble, or worry about what may never happen. Keep in the sunlight.',
+    'author': 'Benjamin Franklin',
+    'cate': 'Sad',
   },
   {
-    'quote' : "To have been loved so deeply, even though the person who loved us is gone, will give us some protection forever",
-    'author' : "J.K. Rowling",
-    'cate' : "Love",
+    'quote':
+    'You don’t have to control your thoughts. You just have to stop letting them control you.',
+    'author': 'Dan Millman',
+    'cate': 'Sad',
   },
   {
-    'quote' : "Love never dies a natural death. It dies because we don't know how to replenish its source",
-    'author' : "Anaïs Nin",
-    'cate' : "Love",
-  },
-  {
-    'quote' : "The real lover is the man who can thrill you by kissing your forehead or smiling into your eyes or just staring into space",
-    'author' : "Marilyn Monroe",
-    'cate' : "Love",
-  },
-  {
-    'quote' : "If you live to be a hundred, I want to live to be a hundred minus one day so I never have to live without you",
-    'author' : "A.A. Milne",
-    'cate' : "Love",
-  },
-  {
-    'quote' : "There is always some madness in love. But there is also always some reason in madness",
-    'author' : "George Bernard Shaw",
-    'cate' : "Love",
-  },
-  {
-    'quote' : "For one human being to love another: that is perhaps the most difficult of all our tasks",
-    'author' : "Rainer Maria Rilke",
-    'cate' : "Love",
-  },
-  {
-    'quote' : "The greatest glory in living lies not in never falling, but in rising every time we fall",
-    'author' : "Nelson Mandela",
-    'cate' : "Inspiration",
-  },
-  {
-    'quote' : "The future belongs to those who believe in the beauty of their dreams",
-    'author' : "Eleanor Roosevelt",
-    'cate' : "Inspiration",
-  },{
-    'quote' : "The only person you are destined to become is the person you decide to be",
-    'author' : "Ralph Waldo Emerson",
-    'cate' : "Inspiration",
-  },{
-    'quote' : "You will face many defeats in life, but never let yourself be defeated",
-    'author' : "Maya Angelou",
-    'cate' : "Inspiration",
-  },{
-    'quote' : "Go confidently in the direction of your dreams! Live the life you've imagined",
-    'author' : "Henry David Thoreau",
-    'cate' : "Inspiration",
-  },{
-    'quote' : "Success is not final, failure is not fatal: It is the courage to continue that counts",
-    'author' : "Winston Churchill",
-    'cate' : "Inspiration",
-  },{
-    'quote' : "You are never too old to set another goal or to dream a new dream",
-    'author' : "C.S. Lewis",
-    'cate' : "Inspiration",
-  },{
-    'quote' : "Tell me and I forget. Teach me and I remember. Involve me and I learn",
-    'author' : "Benjamin Franklin",
-    'cate' : "Inspiration",
-  },{
-    'quote' : "The key is not to prioritize what's on your schedule, but to schedule your priorities",
-    'author' : "Stephen Covey",
-    'cate' : "Inspiration",
-  },{
-    'quote' : "What lies behind us and what lies before us are tiny matters compared to what lies within us",
-    'author' : "Ralph Waldo Emerson",
-    'cate' : "Inspiration",
-  },{
-    'quote' : "It is our choices that show what we truly are, far more than our abilities",
-    'author' : "J.K. Rowling",
-    'cate' : "Inspiration",
-  },{
-    'quote' : "The question isn't who is going to let me; it's who is going to stop me",
-    'author' : "Ayn Rand",
-    'cate' : "Inspiration",
-  },{
-    'quote' : "Our greatest glory is not in never falling, but in rising every time we fall",
-    'author' : "Confucius",
-    'cate' : "Inspiration",
-  },
-  {
-    'quote' : "I've failed over and over and over again in my life and that is why I succeed",
-    'author' : "Michael Jordan",
-    'cate' : "Sports",
-  },{
-    'quote' : "I hated every minute of training, but I said, 'Don’t quit. Suffer now and live the rest of your life as a champion",
-    'author' : "Muhammad Ali",
-    'cate' : "Sports",
-  },{
-    'quote' : "Ability is what you’re capable of doing. Motivation determines what you do. Attitude determines how well you do it",
-    'author' : "Lou Holtz",
-    'cate' : "Sports",
-  },{
-    'quote' : "A champion is simply someone who did not give up when they wanted to",
-    'author' : "Tom Landry",
-    'cate' : "Sports",
-  },{
-    'quote' : "A life is not important except in the impact it has on other lives",
-    'author' : "Jackie Robinson",
-    'cate' : "Sports",
-  },{
-    'quote' : "The vision of a champion is bent over, drenched in sweat, at the point of exhaustion when nobody else is looking",
-    'author' : "Mia Hamm",
-    'cate' : "Sports",
-  },{
-    'quote' : "I really think a champion is defined not by their wins but by how they can recover when they fall",
-    'author' : "Serena Williams",
-    'cate' : "Sports",
-  },{
-    'quote' : "The moment you give up is the moment you let someone else win",
-    'author' : "Kobe Bryant",
-    'cate' : "Sports",
-  },{
-    'quote' : "You can't put a limit on anything. The more you dream, the farther you get",
-    'author' : "Michael Phelps",
-    'cate' : "Sports",
-  },{
-    'quote' : "What makes something special is not just what you have to gain, but what you feel there is to lose",
-    'author' : "Andre Agassi",
-    'cate' : "Sports",
-  },{
-    'quote' : "Ask not what your teammates can do for you. Ask what you can do for your teammates",
-    'author' : "Magic Johnson",
-    'cate' : "Sports",
-  },{
-    'quote' : "Excellence is not a singular act but a habit. You are what you repeatedly do",
-    'author' : "Shaquille O'Neal",
-    'cate' : "Sports",
-  },{
-    'quote' : "You have to fight to reach your dream. You have to sacrifice and work hard for it",
-    'author' : "Lionel Messi",
-    'cate' : "Sports",
-  },{
-    'quote' : "Wins and losses come a dime a dozen. But effort? Nobody can judge that. Because effort is between you and you",
-    'author' : "Ray Lewis",
-    'cate' : "Sports",
-  },
-  {
-    'quote' : "The best way to predict the future is to invent it",
-    'author' : "Alan Kay",
-    'cate' : "Motivation",
-  },
-  {
-    'quote' : "You miss 100% of the shots you don't take",
-    'author' : "Wayne Gretzky",
-    'cate' : "Motivation",
-  },{
-    'quote' : "Success is not final, failure is not fatal: It is the courage to continue that counts",
-    'author' : "Winston Churchill",
-    'cate' : "Motivation",
-  },{
-    'quote' : "The only way to do great work is to love what you do",
-    'author' : "Steve Jobs",
-    'cate' : "Motivation",
-  },{
-    'quote' : "Don't watch the clock; do what it does. Keep going",
-    'author' : "Sam Levenson",
-    'cate' : "Motivation",
-  },{
-    'quote' : "The only limit to our realization of tomorrow will be our doubts of today",
-    'author' : "Franklin D. Roosevelt",
-    'cate' : "Motivation",
-  },{
-    'quote' : "It does not matter how slowly you go as long as you do not stop",
-    'author' : "Confucius",
-    'cate' : "Motivation",
-  },{
-    'quote' : "Your time is limited, don't waste it living someone else's life",
-    'author' : "Steve Jobs",
-    'cate' : "Motivation",
-  },{
-    'quote' : "You are never too old to set another goal or to dream a new dream",
-    'author' : "C.S. Lewis",
-    'cate' : "Motivation",
-  },{
-    'quote' : "The future belongs to those who believe in the beauty of their dreams",
-    'author' : "Eleanor Roosevelt",
-    'cate' : "Motivation",
-  },{
-    'quote' : "You are braver than you believe, stronger than you seem, and smarter than you think",
-    'author' : "A.A. Milne",
-    'cate' : "Motivation",
-  },{
-    'quote' : "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart",
-    'author' : "Roy T. Bennett",
-    'cate' : "Motivation",
-  },{
-    'quote' : "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle",
-    'author' : "Christian D. Larson",
-    'cate' : "Motivation",
-  },{
-    'quote' : "Do not wait to strike till the iron is hot; but make it hot by striking",
-    'author' : "William Butler Yeats",
-    'cate' : "Motivation",
-  },
-  {
-    "quote": "The best way to predict the future is to create it.",
-    "author": "Abraham Lincoln",
-    'cate' : "Positive",
-  },
-  {
-    "quote": "Believe you can and you're halfway there.",
-    "author": "Theodore Roosevelt",
-    'cate' : "Positive",
-
-  },
-  {
-    "quote":
-    "The only limit to our realization of tomorrow will be our doubts of today.",
-    "author": "Franklin D. Roosevelt",
-    'cate' : "Positive",
-  },
-  {
-    "quote": "With the new day comes new strength and new thoughts.",
-    "author": "Eleanor Roosevelt",
-    'cate' : "Positive",
-  },
-  {
-    "quote":
-    "You are never too old to set another goal or to dream a new dream.",
-    "author": "C.S. Lewis",
-    'cate' : "Positive",
-  },
-  {
-    "quote": "You must be the change you wish to see in the world.",
-    "author": "Mahatma Gandhi",
-    'cate' : "Positive",
-  },
-  {
-    "quote":
-    "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-    "author": "Winston Churchill",
-    'cate' : "Positive",
-  },
-  {
-    "quote":
-    "Happiness is not something readymade. It comes from your own actions.",
-    "author": "Dalai Lama",
-    'cate' : "Positive",
-  },
-  {
-    "quote": "In the middle of difficulty lies opportunity.",
-    "author": "Albert Einstein",
-    'cate' : "Positive",
-  },
-  {
-    "quote":
-    "Optimism is the faith that leads to achievement. Nothing can be done without hope and confidence.",
-    "author": "Helen Keller",
-    'cate' : "Positive",
-  },
-  {
-    "quote": "The only way to do great work is to love what you do.",
-    "author": "Steve Jobs",
-    'cate' : "Positive",
-  },
-  {
-    "quote": "The purpose of our lives is to be happy.",
-    "author": "Dalai Lama",
-    'cate' : "Positive",
-  },
-  {
-    "quote":
-    "Every day may not be good, but there is something good in every day.",
-    "author": "Unknown",
-    'cate' : "Positive",
+    'quote':
+    'Anxiety does not empty tomorrow of its sorrows, but only empties today of its strength.',
+    'author': 'Charles Spurgeon',
+    'cate': 'Sad',
   },
   {
-    "quote": "You miss 100% of the shots you don't take.",
-    "author": "Wayne Gretzky",
-    'cate' : "Positive",
+    'quote':
+    'P.S. You’re not going to die. Here’s the white-hot truth: if you go bankrupt, you’ll still be okay. If you lose the gig, the lover, the house, you’ll still be okay.',
+    'author': 'Danielle LaPorte',
+    'cate': 'Sad',
   },
   {
-    "quote":
-    "Keep your face always toward the sunshine—and shadows will fall behind you.",
-    "author": "Walt Whitman",
-    'cate' : "Positive",
+    'quote':
+    'The greatest weapon against stress is our ability to choose one thought over another.',
+    'author': 'William James',
+    'cate': 'Sad',
   },
   {
-    "quote":
-    "Your present circumstances don't determine where you can go; they merely determine where you start.",
-    "author": "Nido Qubein",
-    'cate' : "Mental Health",
+    'quote':
+    'You can’t always control what goes on outside. But you can always control what goes on inside.',
+    'author': 'Wayne Dyer',
+    'cate': 'Sad',
   },
   {
-    "quote": "The only journey is the one within.",
-    "author": "Rainer Maria Rilke",
-    'cate' : "Mental Health",
+    'quote': 'Worry often gives a small thing a big shadow.',
+    'author': 'Swedish Proverb',
+    'cate': 'Sad',
   },
   {
-    "quote":
-    "The greatest glory in living lies not in never falling, but in rising every time we fall.",
-    "author": "Nelson Mandela",
-    'cate' : "Mental Health",
+    'quote':
+    'Our anxiety does not come from thinking about the future, but from wanting to control it.',
+    'author': 'Kahlil Gibran',
+    'cate': 'Sad',
   },
   {
-    "quote":
-    "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
-    "author": "Ralph Waldo Emerson",
-    'cate' : "Mental Health",
+    'quote': 'Nothing diminishes anxiety faster than action.',
+    'author': 'Walter Anderson',
+    'cate': 'Sad',
   },
   {
-    "quote": "The only way to do great work is to love what you do.",
-    "author": "Steve Jobs",
-    'cate' : "Mental Health",
+    'quote':
+    'Anxiety is a thin stream of fear trickling through the mind. If encouraged, it cuts a channel into which all other thoughts are drained.',
+    'author': 'Arthur Somers Roche',
+    'cate': 'Sad',
   },
+  //buisness
   {
-    "quote":
-    "You are never too old to set another goal or to dream a new dream.",
-    "author": "C.S. Lewis",
-    'cate' : "Mental Health",
+    'quote': 'The best way to predict the future is to create it.',
+    'author': 'Peter Drucker',
+    'cate': 'Buisness',
   },
   {
-    "quote": "Believe you can and you're halfway there.",
-    "author": "Theodore Roosevelt",
-    'cate' : "Mental Health",
+    'quote':
+    'Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.',
+    'author': 'Albert Schweitzer',
+    'cate': 'Buisness',
   },
   {
-    "quote":
-    "The only person you are destined to become is the person you decide to be.",
-    "author": "Ralph Waldo Emerson",
-    'cate' : "Mental Health",
+    'quote': 'The only way to do great work is to love what you do.',
+    'author': 'Steve Jobs',
+    'cate': 'Buisness',
   },
-  {"quote": "The greatest wealth is mental health.", "author": "Unknown",
-    'cate' : "Mental Health",},
   {
-    "quote":
-    "You don't have to control your thoughts. You just have to stop letting them control you.",
-    "author": "Dan Millman",
-    'cate' : "Mental Health",
+    'quote': "Opportunities don't happen. You create them.",
+    'author': 'Chris Grosser',
+    'cate': 'Buisness',
   },
   {
-    "quote":
-    "Your mental health is a priority. Your happiness is essential. Your self-care is a necessity.",
-    "author": "Unknown",
-    'cate' : "Mental Health",
+    'quote': "'Don't be afraid to give up the good to go for the great.'",
+    'author': 'John D. Rockefeller',
+    'cate': 'Buisness',
   },
   {
-    "quote":
-    "You, yourself, as much as anybody in the entire universe, deserve your love and affection.",
-    "author": "Buddha",
-    'cate' : "Mental Health",
+    'quote':
+    'Success usually comes to those who are too busy to be looking for it.',
+    'author': 'Henry David Thoreau',
+    'cate': 'Buisness',
   },
   {
-    "quote":
-    "The thing about recovery is that it’s not a destination. It’s a journey.",
-    "author": "Unknown",
-    'cate' : "Mental Health",
+    'quote':
+    'Try not to become a man of success, but rather try to become a man of value.',
+    'author': 'Albert Einstein',
+    'cate': 'Buisness',
   },
   {
-    "quote": "Self-care is how you take your power back.",
-    "author": "Lalah Delia",
-    'cate' : "Mental Health",
+    'quote': 'The way to get started is to quit talking and begin doing.',
+    'author': 'Walt Disney',
+    'cate': 'Buisness',
   },
   {
-    "quote":
-    "Sometimes the people around you won't understand your journey. They don't need to, it's not for them.",
-    "author": "Joubert Botha",
-    'cate' : "Mental Health",
+    'quote':
+    'Business opportunities are like buses, there\'s always another one coming.',
+    'author': 'Richard Branson',
+    'cate': 'Buisness',
   },
   {
-    "quote": "Discipline is the bridge between goals and accomplishment.",
-    "author": "Jim Rohn",
-    'cate' : "Discipline",
+    'quote': 'A satisfied customer is the best business strategy of all.',
+    'author': 'Michael LeBoeuf',
+    'cate': 'Buisness',
   },
+  //overcoming
   {
-    "quote": "With self-discipline, most anything is possible.",
-    "author": "Theodore Roosevelt",
-    'cate' : "Discipline",
+    'quote':
+    'The only limit to our realization of tomorrow is our doubts of today.',
+    'author': 'Franklin D. Roosevelt',
+    'cate': 'Overcoming',
   },
   {
-    "quote":
-    "We must all suffer one of two things: the pain of discipline or the pain of regret.",
-    "author": "Jim Rohn",
-    'cate' : "Discipline",
+    'quote': 'The greater the obstacle, the more glory in overcoming it.',
+    'author': 'Molière',
+    'cate': 'Overcoming',
   },
   {
-    "quote": "The first and greatest victory is to conquer yourself.",
-    "author": "Plato",
-    'cate' : "Discipline",
+    'quote': 'It always seems impossible until it’s done.',
+    'author': 'Nelson Mandela',
+    'cate': 'Overcoming',
   },
   {
-    "quote":
-    "Success is nothing more than a few simple disciplines, practiced every day.",
-    "author": "Jim Rohn",
-    'cate' : "Discipline",
+    'quote':
+    'What lies behind us and what lies before us are tiny matters compared to what lies within us.',
+    'author': 'Ralph Waldo Emerson',
+    'cate': 'Overcoming',
   },
   {
-    "quote":
-    "Discipline is the soul of an army. It makes small numbers formidable; procures success to the weak, and esteem to all.",
-    "author": "George Washington",
-    'cate' : "Discipline",
+    'quote': 'Turn your wounds into wisdom.',
+    'author': 'Oprah Winfrey',
+    'cate': 'Overcoming',
   },
   {
-    "quote":
-    "The successful person has the habit of doing the things failures don't like to do.",
-    "author": "Thomas Edison",
-    'cate' : "Discipline",
+    'quote': 'The best way out is always through.',
+    'author': 'Robert Frost',
+    'cate': 'Overcoming',
   },
   {
-    "quote": "Without self-discipline, success is impossible, period.",
-    "author": "Lou Holtz",
-    'cate' : "Discipline",
+    'quote':
+    'Success is not final, failure is not fatal: It is the courage to continue that counts.',
+    'author': 'Winston Churchill',
+    'cate': 'Overcoming',
   },
   {
-    "quote":
-    "Discipline is just choosing between what you want now and what you want most.",
-    "author": "Unknown",
-    'cate' : "Discipline",
+    'quote': 'We must embrace pain and burn it as fuel for our journey.',
+    'author': 'Kenji Miyazawa',
+    'cate': 'Overcoming',
   },
   {
-    "quote":
-    "Discipline is the refining fire by which talent becomes ability.",
-    "author": "Roy L. Smith",
-    'cate' : "Discipline",
+    'quote':
+    'Start by doing what’s necessary; then do what’s possible; and suddenly you are doing the impossible.',
+    'author': 'Francis of Assisi',
+    'cate': 'Overcoming',
   },
   {
-    "quote": "The discipline of desire is the background of character.",
-    "author": "John Locke",
-    'cate' : "Discipline",
+    'quote': 'The greater the difficulty, the more glory in surmounting it.',
+    'author': 'Epicurus',
+    'cate': 'Overcoming',
   },
+  //positivity
   {
-    "quote": "He who lives without discipline dies without honor.",
-    "author": "Icelandic Proverb",
-    'cate' : "Discipline",
+    'quote':
+    'Keep your face always toward the sunshine—and shadows will fall behind you.',
+    'author': 'Walt Whitman',
+    'cate': 'Positivity',
   },
   {
-    "quote":
-    "Self-respect is the root of discipline: The sense of dignity grows with the ability to say no to oneself.",
-    "author": "Abraham Joshua Heschel",
-    'cate' : "Discipline",
+    'quote':
+    'In every day, there are 1,440 minutes. That means we have 1,440 daily opportunities to make a positive impact.',
+    'author': 'Les Brown',
+    'cate': 'Positivity',
   },
   {
-    "quote": "Discipline is remembering what you want.",
-    "author": "David Campbell",
-    'cate' : "Discipline",
+    'quote':
+    'You are the sum total of everything you\'ve ever seen, heard, eaten, smelled, been told, forgot—it\'s all there. Everything influences each of us, and because of that, I try to make sure that my experiences are positive.',
+    'author': 'Maya Angelou',
+    'cate': 'Positivity',
   },
   {
-    "quote":
-    "True freedom is impossible without a mind made free by discipline.",
-    "author": "Mortimer J. Adler",
-    'cate' : "Discipline",
+    'quote':
+    'Positive thinking will let you do everything better than negative thinking will.',
+    'author': 'Zig Ziglar',
+    'cate': 'Positivity',
   },
-  {"quote": "The heart was made to be broken.", "author": "Oscar Wilde",
-    'cate' : "Broken",
+  {
+    'quote':
+    'Once you replace negative thoughts with positive ones, you\'ll start having positive results.',
+    'author': 'Willie Nelson',
+    'cate': 'Positivity',
+  },
+  {
+    'quote':
+    'The pessimist sees difficulty in every opportunity. The optimist sees opportunity in every difficulty.',
+    'author': 'Winston Churchill',
+    'cate': 'Positivity',
+  },
+  {
+    'quote': 'Positive anything is better than negative nothing.',
+    'author': 'Elbert Hubbard',
+    'cate': 'Positivity',
+  },
+  {
+    'quote':
+    'Positive thinking is more than just a tagline. It changes the way we behave. And I firmly believe that when I am positive, it not only makes me better, but it also makes those around me better.',
+    'author': 'Harvey Mackay',
+    'cate': 'Positivity',
+  },
+  {
+    'quote': 'Attitude is a little thing that makes a big difference.',
+    'author': 'Winston Churchill',
+    'cate': 'Positivity',
+  },
+  {
+    'quote':
+    'Once you replace negative thoughts with positive ones, you\'ll start having positive results.',
+    'author': 'Willie Nelson',
+    'cate': 'Positivity',
+  },
+  //depration
+  {
+    'quote': 'The opposite of depression is not happiness, but vitality.',
+    'author': 'Andrew Solomon',
+    'cate': 'Depration',
+  },
+  {
+    'quote':
+    'Every man has his secret sorrows which the world knows not; and often times we call a man cold when he is only sad.',
+    'author': 'Henry Wadsworth Longfellow',
+    'cate': 'Depration',
+  },
+  {
+    'quote':
+    'I didn’t want to wake up. I was having a much better time asleep. And that’s really sad. It was almost like a reverse nightmare, like when you wake up from a nightmare you’re so relieved. I woke up into a nightmare.',
+    'author': 'Ned Vizzini',
+    'cate': 'Depration',
+  },
+  {
+    'quote': 'That is all I want in life: for this pain to seem purposeful.',
+    'author': 'Elizabeth Wurtzel',
+    'cate': 'Depration',
+  },
+  {
+    'quote':
+    'Mental pain is less dramatic than physical pain, but it is more common and also more hard to bear. The frequent attempt to conceal mental pain increases the burden: it is easier to say \'My tooth is aching\' than to say \'My heart is broken.\'',
+    'author': 'C.S. Lewis',
+    'cate': 'Depration',
+  },
+  {
+    'quote':
+    "'When you're surrounded by all these people, it can be lonelier than when you\'re by yourself. You can be in a huge crowd, but if you don\'t feel like you can trust anyone or talk to anybody, you feel like you're really alone.'",
+    'author': 'Fiona Apple',
+    'cate': 'Depration',
+  },
+  {
+    'quote':
+    'The so-called ‘psychotically depressed’ person who tries to kill herself doesn’t do so out of quote ‘hopelessness’ or any abstract conviction that life’s assets and debits do not square. And surely not because death seems suddenly appealing. The person in whom Its invisible agony reaches a certain unendurable level will kill herself the same way a trapped person will eventually jump from the window of a burning high-rise. Make no mistake about people who leap from burning windows. Their terror of falling from a great height is still just as great as it would be for you or me standing speculatively at the same window just checking out the view; i.e. the fear of falling remains a constant. The variable here is the other terror, the fire’s flames: when the flames get close enough, falling to death becomes the slightly less terrible of two terrors. It’s not desiring the fall; it’s terror of the flames. And yet nobody down on the sidewalk, looking up and yelling ‘Don’t!’ and ‘Hang on!’, can understand the jump. Not really. You’d have to have personally been trapped and felt flames to really understand a terror way beyond falling.',
+    'author': 'David Foster Wallace',
+    'cate': 'Depration',
   },
   {
-    "quote":
-    "The saddest thing about love is that not only that it cannot last forever, but that heartbreak is soon forgotten.",
-    "author": "William Faulkner",
-    'cate' : "Broken",
+    'quote':
+    'I am in that temper that if I were under water I would scarcely kick to come to the top.',
+    'author': 'John Keats',
+    'cate': 'Depration',
   },
   {
-    "quote": "Love is unconditional. Relationships are not.",
-    "author": "Grant Gudmundson",
-    'cate' : "Broken",
+    'quote':
+    'Depression is like a bruise that never goes away. A bruise in your mind. You just got to be careful not to touch it where it hurts. It\'s always there, though.',
+    'author': 'Jeffrey Eugenides',
+    'cate': 'Depration',
   },
   {
-    "quote": "It's hard to forget someone who gave you so much to remember.",
-    "author": "Unknown",
-    'cate' : "Broken",
+    'quote':
+    'The worst type of crying wasn\'t the kind everyone could see--the wailing on street corners, the tearing at clothes. No, the worst kind happened when your soul wept and no matter what you did, there was no way to comfort it. A section withered and became a scar on the part of your soul that survived. For people like me and Echo, our souls contained more scar tissue than life.',
+    'author': 'Katie McGarry',
+    'cate': 'Depration',
   },
+  // Move on
   {
-    "quote":
-    "The saddest thing is to be a minute to someone when you've made them your eternity.",
-    "author": "Sanober Khan",
-    'cate' : "Broken",
+    'quote':
+    'The only way to make sense out of change is to plunge into it, move with it, and join the dance.',
+    'author': 'Alan Watts',
+    'cate': 'Move on',
   },
   {
-    "quote":
-    "Sometimes, the only soul that can mend a broken heart is the one that broke it.",
-    "author": "Unknown",
-    'cate' : "Broken",
+    'quote': 'Don’t cry because it’s over, smile because it happened.',
+    'author': 'Dr. Seuss',
+    'cate': 'Move on',
   },
   {
-    "quote": "You can't buy love, but you can pay heavily for it.",
-    "author": "Henny Youngman",
-    'cate' : "Broken",
+    'quote':
+    'Yesterday is not ours to recover, but tomorrow is ours to win or lose.',
+    'author': 'Lyndon B. Johnson',
+    'cate': 'Move on',
   },
   {
-    "quote": "Never love anybody that treats you like you're ordinary.",
-    "author": "Oscar Wilde",
-    'cate' : "Broken",
+    'quote': 'Every new beginning comes from some other beginning’s end.',
+    'author': 'Seneca',
+    'cate': 'Move on',
   },
   {
-    "quote":
-    "It hurts to breathe because every breath I take proves I can't live without you.",
-    "author": "Unknown",
-    'cate' : "Broken",
+    'quote':
+    'Letting go means to come to the realization that some people are a part of your history, but not a part of your destiny.',
+    'author': 'Steve Maraboli',
+    'cate': 'Move on',
   },
   {
-    "quote":
-    "The cure for a broken heart is simple, my lady. A hot bath and a good night's sleep.",
-    "author": "Margaret George",
-    'cate' : "Broken",
+    'quote':
+    'The truth is, unless you let go, unless you forgive yourself, unless you forgive the situation, unless you realize that the situation is over, you cannot move forward.',
+    'author': 'Steve Maraboli',
+    'cate': 'Move on',
   },
-  {"quote": "Hearts are made to be broken.", "author": "Oscar Wilde",
-    'cate' : "Broken",},
   {
-    "quote":
-    "Love is never lost. If not reciprocated, it will flow back and soften and purify the heart.",
-    "author": "Washington Irving",
-    'cate' : "Broken",
+    'quote':
+    'It is important that we forgive ourselves for making mistakes. We need to learn from our errors and move on.',
+    'author': 'Steve Maraboli',
+    'cate': 'Move on',
   },
   {
-    "quote":
-    "The worst feeling is pretending you don't care about something when really it's all you seem to think about.",
-    "author": "Unknown",
-    'cate' : "Broken",
+    'quote':
+    'The only thing a person can ever really do is keep moving forward. Take that big leap forward without hesitation, without once looking back. Simply forget the past and forge toward the future.',
+    'author': 'Alyson Noel',
+    'cate': 'Move on',
   },
   {
-    "quote":
-    "Love never dies a natural death. It dies because we don't know how to replenish its source. It dies of blindness and errors and betrayals. It dies of illness and wounds; it dies of weariness, of witherings, of tarnishings.",
-    "author": "Anaïs Nin",
-    'cate' : "Broken",
+    'quote':
+    'It’s time to say goodbye, but I think goodbyes are sad and I’d much rather say hello. Hello to a new adventure.',
+    'author': 'Ernie Harwell',
+    'cate': 'Move on',
   },
   {
-    "quote":
-    "One day you're going to remember me and how much I loved you... then you're gonna hate yourself for letting me go.",
-    "author": "Aubrey Drake Graham",
-    'cate' : "Broken",
+    'quote':
+    'The greatest step towards a life of simplicity is to learn to let go.',
+    'author': 'Steve Maraboli',
+    'cate': 'Move on',
   },
+  // Photos
   {
-    "quote": "Friendship is born at that moment when one person says to another, 'What! You too? I thought I was the only one.'",
-    "author": "C.S. Lewis",
-    'cate' : "friendship",
+    'quote':
+    'Taking pictures is savoring life intensely, every hundredth of a second.',
+    'author': 'Marc Riboud',
+    'cate': 'Photos',
   },
   {
-    "quote": "A real friend is one who walks in when the rest of the world walks out.",
-    "author": "Walter Winchell",
-    'cate' : "friendship",
+    'quote': 'Photography is the story I fail to put into words.',
+    'author': 'Destin Sparks',
+    'cate': 'Photos',
   },
   {
-    "quote": "Friendship is the only cement that will ever hold the world together.",
-    "author": "Woodrow Wilson",
-    'cate' : "friendship",
+    'quote':
+    'When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence.',
+    'author': 'Ansel Adams',
+    'cate': 'Photos',
   },
   {
-    "quote": "A friend is someone who knows all about you and still loves you.",
-    "author": "Elbert Hubbard",
-    'cate' : "friendship",
+    'quote':
+    'Photography takes an instant out of time, altering life by holding it still.',
+    'author': 'Dorothea Lange',
+    'cate': 'Photos',
   },
   {
-    "quote": "True friendship comes when the silence between two people is comfortable.",
-    "author": "David Tyson",
-    'cate' : "friendship",
+    'quote': 'You don’t take a photograph, you make it.',
+    'author': 'Ansel Adams',
+    'cate': 'Photos',
   },
   {
-    "quote": "There is nothing on this earth more to be prized than true friendship.",
-    "author": "Thomas Aquinas",
-    'cate' : "friendship",
+    'quote':
+    'A photograph is a secret about a secret. The more it tells you, the less you know.',
+    'author': 'Diane Arbus',
+    'cate': 'Photos',
   },
   {
-    "quote": "Friends are the siblings God never gave us.",
-    "author": "Mencius",
-    'cate' : "friendship",
+    'quote': 'Photography is the beauty of life, captured.',
+    'author': 'Tara Chisholm',
+    'cate': 'Photos',
   },
   {
-    "quote": "A friend is one who overlooks your broken fence and admires the flowers in your garden.",
-    "author": "Unknown",
-    'cate' : "friendship",
+    'quote':
+    'In photography, there is a reality so subtle that it becomes more real than reality.',
+    'author': 'Alfred Stieglitz',
+    'cate': 'Photos',
   },
   {
-    "quote": "A friend is someone who makes it easy to believe in yourself.",
-    "author": "Heidi Wills",
-    'cate' : "friendship",
+    'quote':
+    'To me, photography is an art of observation. It’s about finding something interesting in an ordinary place… I’ve found it has little to do with the things you see and everything to do with the way you see them.',
+    'author': 'Elliott Erwitt',
+    'cate': 'Photos',
   },
   {
-    "quote": "Friendship is a sheltering tree.",
-    "author": "Samuel Taylor Coleridge",
-    'cate' : "friendship",
+    'quote':
+    'The best thing about a picture is that it never changes, even when the people in it do.',
+    'author': 'Andy Warhol',
+    'cate': 'Photos',
   },
+// Status
   {
-    "quote": "The only way to have a friend is to be one.",
-    "author": "Ralph Waldo Emerson",
-    'cate' : "friendship",
+    'quote': 'Life is 10% what happens to us and 90% how we react to it.',
+    'author': 'Charles R. Swindoll',
+    'cate': 'Status',
   },
   {
-    "quote": "A true friend is the greatest of all blessings.",
-    "author": "Francois de La Rochefoucauld",
-    'cate' : "friendship",
+    'quote': 'The only way to do great work is to love what you do.',
+    'author': 'Steve Jobs',
+    'cate': 'Status',
   },
   {
-    "quote": "A single rose can be my garden... a single friend, my world.",
-    "author": "Leo Buscaglia",
-    'cate' : "friendship",
+    'quote': 'Believe you can and you’re halfway there.',
+    'author': 'Theodore Roosevelt',
+    'cate': 'Status',
   },
   {
-    "quote": "Good friends, good books, and a sleepy conscience: this is the ideal life.",
-    "author": "Mark Twain",
-    'cate' : "friendship",
+    'quote':
+    'You are never too old to set another goal or to dream a new dream.',
+    'author': 'C.S. Lewis',
+    'cate': 'Status',
   },
   {
-    "quote": "Friendship is the golden thread that ties the heart of all the world.",
-    "author": "John Evelyn",
-    'cate' : "friendship",
+    'quote': 'Happiness is not by chance, but by choice.',
+    'author': 'Jim Rohn',
+    'cate': 'Status',
   },
   {
-    "quote": "A friend to all is a friend to none.",
-    "author": "Aristotle",
-    'cate' : "friendship",
+    'quote':
+    'Success is not final, failure is not fatal: It is the courage to continue that counts.',
+    'author': 'Winston Churchill',
+    'cate': 'Status',
   },
   {
-    "quote": "The language of friendship is not words but meanings.",
-    "author": "Henry David Thoreau",
-    'cate' : "friendship",
+    'quote':
+    'The only limit to our realization of tomorrow is our doubts of today.',
+    'author': 'Franklin D. Roosevelt',
+    'cate': 'Status',
   },
   {
-    "quote": "A true friend is someone who is there for you when he'd rather be anywhere else.",
-    "author": "Len Wein",
-    'cate' : "friendship",
+    'quote':
+    'Life isn’t about waiting for the storm to pass, it’s about learning to dance in the rain.',
+    'author': 'Vivian Greene',
+    'cate': 'Status',
   },
   {
-    "quote": "Friends show their love in times of trouble, not in happiness.",
-    "author": "Euripides",
-    'cate' : "friendship",
+    'quote': 'It always seems impossible until it is done.',
+    'author': 'Nelson Mandela',
+    'cate': 'Status',
   },
   {
-    "quote": "Friendship improves happiness, and abates misery, by doubling our joys, and dividing our grief.",
-    "author": "Marcus Tullius Cicero",
-    'cate' : "friendship",
-  }
+    'quote': 'In the end, we only regret the chances we didn’t take.',
+    'author': 'Anonymous',
+    'cate': 'Status',
+  },
+  // Sucide
+  {
+    'quote': 'Suicide is not a remedy.',
+    'author': 'James A. Garfield',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'The thought of suicide is a great consolation: by means of it one gets through many a dark night.',
+    'author': 'Friedrich Nietzsche',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'Suicide does not end the chances of life getting worse, it eliminates the possibility of it ever getting any better.',
+    'author': 'Unknown',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'But in the end one needs more courage to live than to kill himself.',
+    'author': 'Albert Camus',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'Sometimes even to live is an act of courage.',
+    'author': 'Seneca',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'No one ever lacks a good reason for suicide.',
+    'author': 'Cesare Pavese',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'Suicide is mans way of telling God, You can not fire me – I quit.',
+    'author': 'Bill Maher',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'The only difference between a suicide and a martyrdom really is the amount of press coverage.',
+    'author': 'Chuck Palahniuk',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'Place not your trust in the hope of a cure, for it is not given to man to understand the nature of death.',
+    'author': 'Henri-Frédéric Amiel',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'The real reason for not committing suicide is because you always know how swell life gets again after the hell is over.',
+    'author': 'Ernest Hemingway',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'To die will be an awfully big adventure.',
+    'author': 'J.M. Barrie',
+    'cate': 'Sucide',
+  },
+  {
+    'quote': 'There is but one truly serious philosophical problem, and that is suicide.',
+    'author': 'Albert Camus',
+    'cate': 'Sucide',
+  },
 ];

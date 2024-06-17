@@ -5,6 +5,7 @@ import 'package:flutter/widgets.dart';
 import 'package:quote_app/Utils/List.dart';
 
 import '../Utils/ImagesList.dart';
+import 'HomeScreen.dart';
 
 double textSizeSlider = 10;
 
@@ -21,6 +22,7 @@ class _QuotePageState extends State<QuotePage> {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
+      appBar: AppBar(),
       // backgroundColor: Colors.black,
       // extendBody: true,
 
@@ -56,9 +58,7 @@ class _QuotePageState extends State<QuotePage> {
                         return Container(
                           height: h * 0.800,
                           width: w * 0.95,
-                          // decoration: BoxDecoration(
-                          //   color: Colors.black12
-                          // ),
+
                           child: SingleChildScrollView(
                             child: Column(
                               children: [
@@ -101,17 +101,24 @@ class _QuotePageState extends State<QuotePage> {
                                     itemCount: Minimalist_ImagesList.length,
                                     scrollDirection: Axis.horizontal,
                                     itemBuilder: (context, index) {
-                                      return Container(
-                                        margin: EdgeInsets.all(5),
-                                        height: h * 0.30,
-                                        width: w * 0.4,
-                                        decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    Minimalist_ImagesList[
-                                                        index])),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(25))),
+                                      return GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            selectbg=Minimalist_ImagesList[index];
+                                          });
+                                        },
+                                        child: Container(
+                                          margin: EdgeInsets.all(5),
+                                          height: h * 0.30,
+                                          width: w * 0.4,
+                                          decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      Minimalist_ImagesList[
+                                                          index])),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(25))),
+                                        ),
                                       );
                                     },
                                   ),
@@ -215,28 +222,6 @@ class _QuotePageState extends State<QuotePage> {
                                     },
                                   ),
                                 ),
-
-                                // ...List.generate(10, (index) => SizedBox(
-                                //   height: h * 0.22,
-                                //   width: w * 0.9,
-                                //   child: ListView.builder(
-                                //     itemCount: 5,
-                                //     scrollDirection: Axis.horizontal,
-                                //     itemBuilder: (context, index) {
-                                //       return Container(
-                                //         margin: EdgeInsets.all(5),
-                                //         height: h * 0.20,
-                                //         width: w * 0.3,
-                                //         decoration: BoxDecoration(
-                                //             image: DecorationImage(
-                                //                 image: AssetImage(
-                                //                     'Assets/Images/Motivation/bg 2.jpg')),
-                                //             borderRadius: BorderRadius.all(
-                                //                 Radius.circular(25))),
-                                //       );
-                                //     },
-                                //   ),
-                                // ),)
                               ],
                             ),
                           ),
@@ -250,22 +235,6 @@ class _QuotePageState extends State<QuotePage> {
                 )),
             IconButton(
                 onPressed: () {
-                  // BottomSheet(
-                  //   onClosing: () {},
-                  //   builder: (BuildContext context) {
-                  //     return SizedBox(
-                  //       height: h * 0.400,
-                  //     );
-                  //   },
-                  // );
-
-                  // showBottomSheet(
-                  //     context: context,
-                  //     builder: (BuildContext context) {
-                  //       return SizedBox(
-                  //         height: h * 0.50,
-                  //       );
-                  //     });
                   showModalBottomSheet(
                       backgroundColor: Colors.black26,
                       shape: RoundedRectangleBorder(
@@ -412,7 +381,7 @@ class _QuotePageState extends State<QuotePage> {
         width: w * 0.980 + 10,
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('Assets/Images/Luxury/a13.jpg'),
+                image: AssetImage(selectbg),
                 fit: BoxFit.cover)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -471,17 +440,29 @@ class _QuotePageState extends State<QuotePage> {
             SizedBox(
               height: h * 0.15,
             ),
-            Expanded(
-              flex: 3,
-              child: SelectableText(
-                '',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 40,
-                    fontWeight: FontWeight.w500),
-              ),
-            ),
+           PageView(
+             children: [
+               ...List.generate(categoryStore.length, (index) => ListTile(
+                 title: SelectableText(
+                   Quote_Type_Categories[selectedindex]['home_Text'],
+                   textAlign: TextAlign.center,
+                   style: TextStyle(
+                       color: Colors.white,
+                       fontSize: 10,
+                       fontWeight: FontWeight.w500),
+                 ),
+                 subtitle: SelectableText(
+                   categoryStore[index]['quote'],
+
+                   textAlign: TextAlign.center,
+                   style: TextStyle(
+                       color: Colors.white,
+                       fontSize: 10,
+                       fontWeight: FontWeight.w500),
+                 ),
+               ),),
+             ],
+           ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -526,3 +507,4 @@ class _QuotePageState extends State<QuotePage> {
 }
 
 
+String selectbg='Assets/Images/Luxury/a13.jpg';
