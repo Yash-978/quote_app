@@ -6,7 +6,7 @@ import 'package:quote_app/Utils/List.dart';
 
 import '../Utils/ImagesList.dart';
 import 'HomeScreen.dart';
-
+GlobalKey imgKey=GlobalKey();
 double textSizeSlider = 10;
 
 class QuotePage extends StatefulWidget {
@@ -22,7 +22,6 @@ class _QuotePageState extends State<QuotePage> {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
     return Scaffold(
-
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.white,
@@ -154,16 +153,25 @@ class _QuotePageState extends State<QuotePage> {
                                     itemCount: Gradient_ImageList.length,
                                     scrollDirection: Axis.horizontal,
                                     itemBuilder: (context, index) {
-                                      return Container(
-                                        margin: EdgeInsets.all(5),
-                                        height: h * 0.30,
-                                        width: w * 0.4,
-                                        decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    Gradient_ImageList[index])),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(25))),
+                                      return GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            selectbg =
+                                                Gradient_ImageList[index];
+                                          });
+                                        },
+                                        child: Container(
+                                          margin: EdgeInsets.all(5),
+                                          height: h * 0.30,
+                                          width: w * 0.4,
+                                          decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      Gradient_ImageList[
+                                                          index])),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(25))),
+                                        ),
                                       );
                                     },
                                   ),
@@ -203,16 +211,23 @@ class _QuotePageState extends State<QuotePage> {
                                     itemCount: Luxury_ImageList.length,
                                     scrollDirection: Axis.horizontal,
                                     itemBuilder: (context, index) {
-                                      return Container(
-                                        margin: EdgeInsets.all(5),
-                                        height: h * 0.30,
-                                        width: w * 0.4,
-                                        decoration: BoxDecoration(
-                                            image: DecorationImage(
-                                                image: AssetImage(
-                                                    Luxury_ImageList[index])),
-                                            borderRadius: BorderRadius.all(
-                                                Radius.circular(25))),
+                                      return GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            selectbg = Luxury_ImageList[index];
+                                          });
+                                        },
+                                        child: Container(
+                                          margin: EdgeInsets.all(5),
+                                          height: h * 0.30,
+                                          width: w * 0.4,
+                                          decoration: BoxDecoration(
+                                              image: DecorationImage(
+                                                  image: AssetImage(
+                                                      Luxury_ImageList[index])),
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(25))),
+                                        ),
                                       );
                                     },
                                   ),
@@ -257,19 +272,21 @@ class _QuotePageState extends State<QuotePage> {
                                       size: 30,
                                     ),
                                   )),
-                              Slider(
-                                max: 100,
-                                divisions: 10,
-                                label: textSizeSlider.round().toString(),
-                                inactiveColor: Colors.black87,
-                                activeColor: Colors.white,
-                                value: textSizeSlider,
-                                onChanged: (value) {
-                                  setState(() {
-                                    textSizeSlider = value;
-                                    print(textSizeSlider);
-                                  });
-                                },
+                              StatefulBuilder(
+                                builder: (context, setState) => Slider(
+                                  max: 100,
+                                  divisions: 10,
+                                  label: textSizeSlider.round().toString(),
+                                  inactiveColor: Colors.black87,
+                                  activeColor: Colors.white,
+                                  value: textSizeSlider,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      textSizeSlider = value;
+                                      print(textSizeSlider);
+                                    });
+                                  },
+                                ),
                               ),
                               Row(
                                 children: [
@@ -334,7 +351,38 @@ class _QuotePageState extends State<QuotePage> {
                                       size: 30,
                                     ),
                                   ),
+
                                 ],
+                              ),
+                              SizedBox(
+                                height: h * 0.20,
+                                width: w * 0.99 + 10,
+                                child: ListView.builder(
+                                  scrollDirection: Axis.horizontal,
+                                  itemCount: TextColorList.length,
+                                  itemBuilder: (context, index) =>
+                                      GestureDetector(
+                                        onTap: () {
+                                          setState(() {
+                                            selectTextColor =
+                                            TextColorList[index];
+                                          });
+                                        },
+                                        child: Container(
+                                          margin: EdgeInsets.all(8),
+                                          height: h * 0.055,
+                                          width: w * 0.20,
+                                          alignment: Alignment.center,
+                                          decoration: BoxDecoration(
+                                            // borderRadius: BorderRadius.circular(20),
+                                              color: TextColorList[index],
+                                              shape: BoxShape.circle,
+                                              border: Border.all(
+                                                  color: Colors.white,
+                                                  width: 0.3)),
+                                        ),
+                                      ),
+                                ),
                               ),
                             ],
                           ),
@@ -379,25 +427,27 @@ class _QuotePageState extends State<QuotePage> {
             children: [
               ...List.generate(
                 categoryStore.length,
-                (index) => Column(
+                (index) => Column(mainAxisAlignment: MainAxisAlignment.center,
                   children: [
+
                     ListTile(
                       title: SelectableText(
-                        Quote_Type_Categories[selectedindex]['home_Text'],
+                        categoryStore[index]['quote'],
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: Colors.white,
+                            color: selectTextColor,
                             fontSize: 40,
                             fontWeight: FontWeight.w500),
                       ),
                       subtitle: SelectableText(
-                        categoryStore[index]['quote'],
+                        '- ${categoryStore[index]['author']} -',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 40,
+                            color: selectTextColor,
+                            fontSize: 30,
                             fontWeight: FontWeight.w500),
                       ),
+
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 22),
@@ -407,9 +457,9 @@ class _QuotePageState extends State<QuotePage> {
                           IconButton(
                             onPressed: () {},
                             icon: Icon(
-                              Icons.bookmark_outline_rounded,
+                              Icons.file_download_outlined,
                               color: Colors.white,
-                              size: 30,
+                              size: 35,
                             ),
                           ),
                           IconButton(
@@ -417,7 +467,7 @@ class _QuotePageState extends State<QuotePage> {
                             icon: Icon(
                               Icons.share,
                               color: Colors.white,
-                              size: 30,
+                              size: 35,
                             ),
                           ),
                           IconButton(
@@ -425,7 +475,7 @@ class _QuotePageState extends State<QuotePage> {
                             icon: Icon(
                               Icons.diamond_rounded,
                               color: Colors.white,
-                              size: 30,
+                              size: 35,
                             ),
                           ),
                         ],
@@ -434,7 +484,6 @@ class _QuotePageState extends State<QuotePage> {
                   ],
                 ),
               ),
-
             ],
           )),
     );
@@ -442,3 +491,18 @@ class _QuotePageState extends State<QuotePage> {
 }
 
 String selectbg = 'Assets/Images/Luxury/a13.jpg';
+Color selectTextColor = Colors.white;
+
+List TextColorList = [
+  Colors.black,
+  Colors.red,
+  Colors.orange,
+  Colors.pink,
+  Colors.cyan,
+  Colors.deepOrange,
+  Colors.green,
+  Colors.white,
+  Colors.purple,
+  Colors.teal,
+  Colors.lime,
+];
