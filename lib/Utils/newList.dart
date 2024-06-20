@@ -1,3 +1,4 @@
+
 List QuoteList = [
   //Motivation
   {

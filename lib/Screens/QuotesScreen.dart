@@ -1,12 +1,20 @@
+import 'dart:io';
+import 'dart:typed_data';
+
+import 'package:path_provider/path_provider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:quote_app/Utils/List.dart';
-
+import 'package:share_extend/share_extend.dart';
+import 'dart:ui' as ui;
 import '../Utils/ImagesList.dart';
 import 'HomeScreen.dart';
-GlobalKey imgKey=GlobalKey();
+
+GlobalKey imgKey = GlobalKey();
 double textSizeSlider = 10;
 
 class QuotePage extends StatefulWidget {
@@ -351,7 +359,6 @@ class _QuotePageState extends State<QuotePage> {
                                       size: 30,
                                     ),
                                   ),
-
                                 ],
                               ),
                               SizedBox(
@@ -362,26 +369,24 @@ class _QuotePageState extends State<QuotePage> {
                                   itemCount: TextColorList.length,
                                   itemBuilder: (context, index) =>
                                       GestureDetector(
-                                        onTap: () {
-                                          setState(() {
-                                            selectTextColor =
-                                            TextColorList[index];
-                                          });
-                                        },
-                                        child: Container(
-                                          margin: EdgeInsets.all(8),
-                                          height: h * 0.055,
-                                          width: w * 0.20,
-                                          alignment: Alignment.center,
-                                          decoration: BoxDecoration(
-                                            // borderRadius: BorderRadius.circular(20),
-                                              color: TextColorList[index],
-                                              shape: BoxShape.circle,
-                                              border: Border.all(
-                                                  color: Colors.white,
-                                                  width: 0.3)),
-                                        ),
-                                      ),
+                                    onTap: () {
+                                      setState(() {
+                                        selectTextColor = TextColorList[index];
+                                      });
+                                    },
+                                    child: Container(
+                                      margin: EdgeInsets.all(8),
+                                      height: h * 0.055,
+                                      width: w * 0.20,
+                                      alignment: Alignment.center,
+                                      decoration: BoxDecoration(
+                                          // borderRadius: BorderRadius.circular(20),
+                                          color: TextColorList[index],
+                                          shape: BoxShape.circle,
+                                          border: Border.all(
+                                              color: Colors.white, width: 0.3)),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ],
@@ -416,20 +421,21 @@ class _QuotePageState extends State<QuotePage> {
         height: h * 0.09,
         shape: CircularNotchedRectangle(),
       ),
-      body: Container(
-          height: h * 0.990 + 12,
-          width: w * 0.980 + 10,
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(selectbg), fit: BoxFit.cover)),
-          child: PageView(
-            scrollDirection: Axis.vertical,
-            children: [
-              ...List.generate(
-                categoryStore.length,
-                (index) => Column(mainAxisAlignment: MainAxisAlignment.center,
+      body: RepaintBoundary(
+        key: imgKey,
+        child: Container(
+            height: h * 0.990 + 40,
+            width: w * 0.990 + 60,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage(selectbg), fit: BoxFit.cover)),
+            child: PageView.builder(
+              scrollDirection: Axis.vertical,
+              itemCount: categoryStore.length,
+              itemBuilder: (BuildContext context, int index) {
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-
                     ListTile(
                       title: SelectableText(
                         categoryStore[index]['quote'],
@@ -447,7 +453,6 @@ class _QuotePageState extends State<QuotePage> {
                             fontSize: 30,
                             fontWeight: FontWeight.w500),
                       ),
-
                     ),
                     Padding(
                       padding: const EdgeInsets.only(right: 22),
@@ -455,7 +460,16 @@ class _QuotePageState extends State<QuotePage> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () async {
+                              RenderRepaintBoundary imgboundary =
+                                  imgKey.currentContext!.findRenderObject()
+                                      as RenderRepaintBoundary;
+                              ui.Image image = await imgboundary.toImage();
+                              ByteData? imgbyteData = await image.toByteData(
+                                  format: ui.ImageByteFormat.png);
+                              Uint8List img = imgbyteData!.buffer.asUint8List();
+                              ImageGallerySaver.saveImage(img);
+                            },
                             icon: Icon(
                               Icons.file_download_outlined,
                               color: Colors.white,
@@ -463,7 +477,26 @@ class _QuotePageState extends State<QuotePage> {
                             ),
                           ),
                           IconButton(
-                            onPressed: () {},
+                            onPressed: () async {
+                              final path = getApplicationDocumentsDirectory();
+
+                              RenderRepaintBoundary imgboundary =
+                                  imgKey.currentContext!.findRenderObject()
+                                      as RenderRepaintBoundary;
+
+                              ui.Image image = await imgboundary.toImage();
+
+                              ByteData? imgbyteData = await image.toByteData(
+                                  format: ui.ImageByteFormat.png);
+
+                              Uint8List img = imgbyteData!.buffer.asUint8List();
+
+                              File file = File('${path}/img.png');
+
+                              file.writeAsBytes(img);
+
+                              ShareExtend.share(file.path, "IMG");
+                            },
                             icon: Icon(
                               Icons.share,
                               color: Colors.white,
@@ -482,10 +515,10 @@ class _QuotePageState extends State<QuotePage> {
                       ),
                     ),
                   ],
-                ),
-              ),
-            ],
-          )),
+                );
+              },
+            )),
+      ),
     );
   }
 }

@@ -78,8 +78,8 @@ class _HomePageState extends State<HomePage> {
                       for (int i = 0;
                           i < quoteModelQ1!.quoteModel_List.length;
                           i++) {
-                        if (category[index] ==
-                            quoteModelQ1!.quoteModel_List[i].cate) {
+                        if (category[index] == quoteModelQ1!.quoteModel_List[i].cate)
+                        {
                           categoryStore.add(QuoteList[i]);
                         }
                       }

@@ -63,7 +63,7 @@ List Quote_Type_Categories = [
     'home_color': Color(0xffA87BEA)
   },
 ];
-
+GlobalKey imgkey=GlobalKey();
 class QuoteModel {
   String? quote;
   String? author;
