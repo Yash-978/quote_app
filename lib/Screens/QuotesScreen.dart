@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
-import 'package:path_provider/path_provider.dart';
+// import 'package:path_provider/path_provider.dart';
 import 'package:quote_app/Utils/List.dart';
 import 'package:share_extend/share_extend.dart';
 import 'dart:ui' as ui;
@@ -442,7 +442,7 @@ class _QuotePageState extends State<QuotePage> {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             color: selectTextColor,
-                            fontSize: 40,
+                            fontSize: textSizeSlider,
                             fontWeight: FontWeight.w500),
                       ),
                       subtitle: SelectableText(
