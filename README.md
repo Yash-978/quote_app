@@ -1,16 +1,42 @@
-# quote_app
+![quotescreen2](https://github.com/Yash-978/quote_app/assets/147479013/3220f681-b8f3-47c4-b400-50ed3cf4da8f)# quote_app
 
-A new Flutter project.
+<h3 align = "center"> Home Screen List View </h3>
+<p align = "center">
+<img src= "https://github.com/Yash-978/quote_app/assets/147479013/4e46975c-05c8-4769-a14b-61e3848a8d45" width=35%
+height=22% >
 
-## Getting Started
+<h3 align = "center"> Home Screen with Grid View</h3>
+<p align = "center">
+<img src= "https://github.com/Yash-978/quote_app/assets/147479013/19698f18-528e-4c74-944a-9e49e6c920f8" width=35%
+height=22% >
 
-This project is a starting point for a Flutter application.
+<h3 align = "center"> Quote Screen </h3>
+<p align = "center">
+<img src= "https://github.com/Yash-978/quote_app/assets/147479013/ee684e94-6223-454f-a9d6-4dd005560a76" width=35%
+height=22% >
 
-A few resources to get you started if this is your first Flutter project:
+<h3 align = "center"> Quote Screen </h3>
+<p align = "center">
+<img src= "https://github.com/Yash-978/quote_app/assets/147479013/dbb2adb3-96cf-43a6-af07-9f9c0688545a" width=35%
+height=22% >
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+<h3 align = "center"> Themes Screen </h3>
+<p align = "center">
+<img src= "https://github.com/Yash-978/quote_app/assets/147479013/ec920e13-e4c6-4ce9-a1be-1f286e8d9958" width=35%
+height=22% >
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<h3 align = "center"> Themes Screen </h3>
+<p align = "center">
+<img src= "https://github.com/Yash-978/quote_app/assets/147479013/b3ad9645-c5cd-412d-890a-ceb63a0354fb" width=35%
+height=22% >
+
+<h3 align = "center"> Edit Screen </h3>
+<p align = "center">
+<img src= "https://github.com/Yash-978/quote_app/assets/147479013/58e4333e-d3e4-493d-8fad-a57393c26361" width=35%
+height=22% >
+
+<h3 align = "center"> Profile Screen </h3>
+<p align = "center">
+<img src= "https://github.com/Yash-978/quote_app/assets/147479013/01d13b77-233c-4b1b-8771-e470c0bd3072" width=35%
+height=22% >
+
