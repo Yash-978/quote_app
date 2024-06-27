@@ -478,7 +478,7 @@ class _QuotePageState extends State<QuotePage> {
                           ),
                           IconButton(
                             onPressed: () async {
-                              final path = getApplicationDocumentsDirectory();
+                              final path = await getApplicationDocumentsDirectory();
 
                               RenderRepaintBoundary imgboundary =
                                   imgKey.currentContext!.findRenderObject()
@@ -491,7 +491,7 @@ class _QuotePageState extends State<QuotePage> {
 
                               Uint8List img = imgbyteData!.buffer.asUint8List();
 
-                              File file = File('${path}/img.png');
+                              File file = File('${path.path}/img.png');
 
                               file.writeAsBytes(img);
 
