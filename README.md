@@ -1,4 +1,4 @@
-![quotescreen2](https://github.com/Yash-978/quote_app/assets/147479013/3220f681-b8f3-47c4-b400-50ed3cf4da8f)# quote_app
+# quote_app
 
 <h3 align = "center"> Home Screen List View </h3>
 <p align = "center">
