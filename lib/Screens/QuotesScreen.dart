@@ -440,6 +440,9 @@ class _QuotePageState extends State<QuotePage> {
                       title: SelectableText(
                         categoryStore[index]['quote'],
                         textAlign: TextAlign.center,
+
+                        maxLines: 4,
+
                         style: TextStyle(
                             color: selectTextColor,
                             fontSize: textSizeSlider,
