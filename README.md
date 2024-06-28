@@ -40,3 +40,12 @@ height=22% >
 <img src= "https://github.com/Yash-978/quote_app/assets/147479013/01d13b77-233c-4b1b-8771-e470c0bd3072" width=35%
 height=22% >
 
+
+<div align = "center">
+<video src= "https://github.com/Yash-978/quote_app/assets/147479013/fdeb45aa-231e-4228-a8e4-ba11527bf218" width=35%
+height=22% >
+</div>
+
+
+
+
