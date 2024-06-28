@@ -98,6 +98,98 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  fonts:
+    - family: t1
+      fonts:
+        - asset: Assets/textfiles/t1.ttf
+    - family: t2
+      fonts:
+        - asset: Assets/textfiles/t2.ttf
+    - family: t3
+      fonts:
+        - asset: Assets/textfiles/t3.ttf
+    - family: t4
+      fonts:
+        - asset: Assets/textfiles/t4.ttf
+    - family: t5
+      fonts:
+        - asset: Assets/textfiles/t5.ttf
+    - family: t6
+      fonts:
+        - asset: Assets/textfiles/t6.ttf
+    - family: t7
+      fonts:
+        - asset: Assets/textfiles/t7.ttf
+    - family: t8
+      fonts:
+        - asset: Assets/textfiles/t8.ttf
+    - family: t9
+      fonts:
+        - asset: Assets/textfiles/t9.ttf
+    - family: t10
+      fonts:
+        - asset: Assets/textfiles/t10.ttf
+    - family: t11
+      fonts:
+        - asset: Assets/textfiles/t11.ttf
+    - family: t12
+      fonts:
+        - asset: Assets/textfiles/t12.ttf
+    - family: t13
+      fonts:
+        - asset: Assets/textfiles/t13.ttf
+    - family: t14
+      fonts:
+        - asset: Assets/textfiles/t14.ttf
+    - family: t15
+      fonts:
+        - asset: Assets/textfiles/t15.ttf
+    - family: t16
+      fonts:
+        - asset: Assets/textfiles/t16.ttf
+    - family: t17
+      fonts:
+        - asset: Assets/textfiles/t17.ttf
+    - family: t18
+      fonts:
+        - asset: Assets/textfiles/t18.ttf
+    - family: t19
+      fonts:
+        - asset: Assets/textfiles/t19.ttf
+    - family: t20
+      fonts:
+        - asset: Assets/textfiles/t20.ttf
+    - family: t21
+      fonts:
+        - asset: Assets/textfiles/t21.ttf
+    - family: t22
+      fonts:
+        - asset: Assets/textfiles/t22.ttf
+    - family: t23
+      fonts:
+        - asset: Assets/textfiles/t23.ttf
+    - family: t24
+      fonts:
+        - asset: Assets/textfiles/t24.ttf
+    - family: t25
+      fonts:
+        - asset: Assets/textfiles/t25.ttf
+    - family: t26
+      fonts:
+        - asset: Assets/textfiles/t26.ttf
+    - family: t27
+      fonts:
+        - asset: Assets/textfiles/t27.ttf
+    - family: t28
+      fonts:
+        - asset: Assets/textfiles/t28.ttf
+    - family: t29
+      fonts:
+        - asset: Assets/textfiles/t29.ttf
+    - family: t30
+      fonts:
+        - asset: Assets/textfiles/t30.ttf
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

@@ -7,11 +7,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_gallery_saver/image_gallery_saver.dart';
+
 // import 'package:path_provider/path_provider.dart';
 import 'package:quote_app/Utils/List.dart';
 import 'package:share_extend/share_extend.dart';
 import 'dart:ui' as ui;
 import '../Utils/ImagesList.dart';
+import '../Utils/textfontstyle_List.dart';
 import 'HomeScreen.dart';
 
 GlobalKey imgKey = GlobalKey();
@@ -376,8 +378,8 @@ class _QuotePageState extends State<QuotePage> {
                                     },
                                     child: Container(
                                       margin: EdgeInsets.all(8),
-                                      height: h * 0.055,
-                                      width: w * 0.20,
+                                      height: h * 0.0170,
+                                      width: w * 0.170,
                                       alignment: Alignment.center,
                                       decoration: BoxDecoration(
                                           // borderRadius: BorderRadius.circular(20),
@@ -389,6 +391,32 @@ class _QuotePageState extends State<QuotePage> {
                                   ),
                                 ),
                               ),
+                              // SizedBox(
+                              //   height: h*0.08,
+                              //   width: w*0.99+10,
+                              //   child: ListView.builder(scrollDirection: Axis.horizontal,
+                              //     itemCount: Text_fontStyle.length,
+                              //     itemBuilder: (context, index) {
+                              //       return Container(
+                              //         margin: EdgeInsets.all(8),
+                              //         height: h * 0.07,
+                              //         width: w * 0.40,
+                              //         alignment: Alignment.center,
+                              //         decoration: BoxDecoration(
+                              //             border: Border.all(color: Colors.white),
+                              //             borderRadius:
+                              //                 BorderRadius.circular(15)),
+                              //         child: Text(
+                              //           'WisdomWords',
+                              //           style: TextStyle(
+                              //               fontFamily:Text_fontStyle[index],
+                              //               color: Colors.white,
+                              //               fontSize: 20),
+                              //         ),
+                              //       );
+                              //     },
+                              //   ),
+                              // )
                             ],
                           ),
                         );
@@ -440,9 +468,7 @@ class _QuotePageState extends State<QuotePage> {
                       title: SelectableText(
                         categoryStore[index]['quote'],
                         textAlign: TextAlign.center,
-
-                        maxLines: 4,
-
+                        maxLines: 5,
                         style: TextStyle(
                             color: selectTextColor,
                             fontSize: textSizeSlider,
@@ -458,7 +484,7 @@ class _QuotePageState extends State<QuotePage> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 22),
+                      padding: const EdgeInsets.only(right: 40),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -481,7 +507,8 @@ class _QuotePageState extends State<QuotePage> {
                           ),
                           IconButton(
                             onPressed: () async {
-                              final path = await getApplicationDocumentsDirectory();
+                              final path =
+                                  await getApplicationDocumentsDirectory();
 
                               RenderRepaintBoundary imgboundary =
                                   imgKey.currentContext!.findRenderObject()
@@ -502,14 +529,6 @@ class _QuotePageState extends State<QuotePage> {
                             },
                             icon: Icon(
                               Icons.share,
-                              color: Colors.white,
-                              size: 35,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.diamond_rounded,
                               color: Colors.white,
                               size: 35,
                             ),
